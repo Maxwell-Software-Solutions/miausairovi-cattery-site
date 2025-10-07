@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -158,24 +158,12 @@ const Contact = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-sm text-muted-foreground">
-                      +1 (555) 123-4567
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
                     <p className="text-sm text-muted-foreground">
-                      Your City, Your State<br />
+                      Peterborough, UK<br />
                       Available by appointment
                     </p>
                   </div>

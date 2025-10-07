@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -30,12 +30,8 @@ const Footer = () => {
                 <span>info@miausairovi.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Your Location</span>
+                <span>Peterborough, UK</span>
               </div>
             </div>
           </div>
