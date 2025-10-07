@@ -8,7 +8,7 @@ import { toast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 
-const ContactPage = () => {
+const Contact = () => {
   const header = useScrollAnimation();
   const form = useScrollAnimation();
   const info = useScrollAnimation();
@@ -198,4 +198,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default Contact;

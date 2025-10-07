@@ -36,7 +36,7 @@ const cats = [
   },
 ];
 
-const CatsPage = () => {
+const Cats = () => {
   const header = useScrollAnimation();
 
   return (
@@ -86,4 +86,4 @@ const CatsPage = () => {
   );
 };
 
-export default CatsPage;
+export default Cats;

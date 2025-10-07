@@ -12,7 +12,7 @@ const kittens = [
   { id: 8, name: "Tabby Kitten 2", age: "8 weeks", status: "Reserved" },
 ];
 
-const GalleryPage = () => {
+const Gallery = () => {
   const header = useScrollAnimation();
 
   return (
@@ -74,4 +74,4 @@ const GalleryPage = () => {
   );
 };
 
-export default GalleryPage;
+export default Gallery;

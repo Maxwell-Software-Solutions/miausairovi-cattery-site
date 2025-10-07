@@ -2,9 +2,9 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Heart, Shield, Home } from "lucide-react";
+import { Heart, Shield, Home as HomeIcon } from "lucide-react";
 
-const HomePage = () => {
+const Home = () => {
   const hero = useScrollAnimation();
   const features = useScrollAnimation();
   const cta = useScrollAnimation();
@@ -70,7 +70,7 @@ const HomePage = () => {
 
             <Card className="p-6 text-center shadow-soft hover:shadow-hover transition-all bg-gradient-card">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Home className="h-6 w-6 text-primary" />
+                <HomeIcon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Home Raised</h3>
               <p className="text-muted-foreground">
@@ -111,4 +111,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
