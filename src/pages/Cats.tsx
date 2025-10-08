@@ -36,6 +36,39 @@ const cats = [
   },
 ];
 
+interface CatCardProps {
+  cat: typeof cats[0];
+  index: number;
+}
+
+const CatCard = ({ cat, index }: CatCardProps) => {
+  const cardAnimation = useScrollAnimation();
+  return (
+    <div
+      ref={cardAnimation.ref}
+      className={cardAnimation.isVisible ? `fade-in-delay-${Math.min(index % 4, 3)}` : ""}
+    >
+      <Card className="overflow-hidden shadow-soft hover:shadow-hover transition-all bg-gradient-card h-full">
+        <div className="aspect-square bg-secondary/20 flex items-center justify-center">
+          <div className="text-center text-muted-foreground">
+            <p className="text-6xl mb-2">🐱</p>
+            <p className="text-sm">Photo coming soon</p>
+          </div>
+        </div>
+        <div className="p-6">
+          <h3 className="text-2xl font-bold mb-2">{cat.name}</h3>
+          <p className="text-primary font-semibold mb-1">{cat.breed}</p>
+          <p className="text-sm text-muted-foreground mb-3">Color: {cat.color}</p>
+          <p className="text-sm mb-4">{cat.description}</p>
+          <div className="pt-4 border-t border-border">
+            <p className="text-xs font-semibold text-primary">{cat.titles}</p>
+          </div>
+        </div>
+      </Card>
+    </div>
+  );
+};
+
 const Cats = () => {
   const header = useScrollAnimation();
 
@@ -52,34 +85,9 @@ const Cats = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {cats.map((cat, index) => {
-            const cardAnimation = useScrollAnimation();
-            return (
-              <div
-                key={cat.id}
-                ref={cardAnimation.ref}
-                className={cardAnimation.isVisible ? `fade-in-delay-${Math.min(index % 4, 3)}` : ""}
-              >
-                <Card className="overflow-hidden shadow-soft hover:shadow-hover transition-all bg-gradient-card h-full">
-                  <div className="aspect-square bg-secondary/20 flex items-center justify-center">
-                    <div className="text-center text-muted-foreground">
-                      <p className="text-6xl mb-2">🐱</p>
-                      <p className="text-sm">Photo coming soon</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold mb-2">{cat.name}</h3>
-                    <p className="text-primary font-semibold mb-1">{cat.breed}</p>
-                    <p className="text-sm text-muted-foreground mb-3">Color: {cat.color}</p>
-                    <p className="text-sm mb-4">{cat.description}</p>
-                    <div className="pt-4 border-t border-border">
-                      <p className="text-xs font-semibold text-primary">{cat.titles}</p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            );
-          })}
+          {cats.map((cat, index) => (
+            <CatCard key={cat.id} cat={cat} index={index} />
+          ))}
         </div>
       </div>
     </div>

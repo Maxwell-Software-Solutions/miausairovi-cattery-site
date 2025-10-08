@@ -12,6 +12,45 @@ const kittens = [
   { id: 8, name: "Tabby Kitten 2", age: "8 weeks", status: "Reserved" },
 ];
 
+interface KittenCardProps {
+  kitten: typeof kittens[0];
+  index: number;
+}
+
+const KittenCard = ({ kitten, index }: KittenCardProps) => {
+  const cardAnimation = useScrollAnimation();
+  return (
+    <div
+      ref={cardAnimation.ref}
+      className={cardAnimation.isVisible ? `fade-in-delay-${Math.min(index % 4, 3)}` : ""}
+    >
+      <Card className="overflow-hidden shadow-soft hover:shadow-hover transition-all bg-gradient-card">
+        <div className="aspect-square bg-secondary/20 flex items-center justify-center">
+          <div className="text-center text-muted-foreground">
+            <p className="text-5xl mb-2">🐱</p>
+            <p className="text-xs">Photo coming soon</p>
+          </div>
+        </div>
+        <div className="p-4">
+          <h3 className="font-bold mb-1">{kitten.name}</h3>
+          <p className="text-sm text-muted-foreground mb-2">Age: {kitten.age}</p>
+          <span
+            className={`inline-block text-xs px-2 py-1 rounded-full ${
+              kitten.status === "Available"
+                ? "bg-primary/10 text-primary"
+                : kitten.status === "Reserved"
+                ? "bg-accent/10 text-accent"
+                : "bg-muted text-muted-foreground"
+            }`}
+          >
+            {kitten.status}
+          </span>
+        </div>
+      </Card>
+    </div>
+  );
+};
+
 const Gallery = () => {
   const header = useScrollAnimation();
 
@@ -28,40 +67,9 @@ const Gallery = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {kittens.map((kitten, index) => {
-            const cardAnimation = useScrollAnimation();
-            return (
-              <div
-                key={kitten.id}
-                ref={cardAnimation.ref}
-                className={cardAnimation.isVisible ? `fade-in-delay-${Math.min(index % 4, 3)}` : ""}
-              >
-                <Card className="overflow-hidden shadow-soft hover:shadow-hover transition-all bg-gradient-card">
-                  <div className="aspect-square bg-secondary/20 flex items-center justify-center">
-                    <div className="text-center text-muted-foreground">
-                      <p className="text-5xl mb-2">🐱</p>
-                      <p className="text-xs">Photo coming soon</p>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold mb-1">{kitten.name}</h3>
-                    <p className="text-sm text-muted-foreground mb-2">Age: {kitten.age}</p>
-                    <span
-                      className={`inline-block text-xs px-2 py-1 rounded-full ${
-                        kitten.status === "Available"
-                          ? "bg-primary/10 text-primary"
-                          : kitten.status === "Reserved"
-                          ? "bg-accent/10 text-accent"
-                          : "bg-muted text-muted-foreground"
-                      }`}
-                    >
-                      {kitten.status}
-                    </span>
-                  </div>
-                </Card>
-              </div>
-            );
-          })}
+          {kittens.map((kitten, index) => (
+            <KittenCard key={kitten.id} kitten={kitten} index={index} />
+          ))}
         </div>
 
         <div className="mt-12 text-center max-w-2xl mx-auto">
