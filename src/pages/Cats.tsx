@@ -83,16 +83,23 @@ const CatCard = ({ cat, index }: { cat: Cat; index: number }) => {
   return (
     <div ref={cardAnimation.ref} className={cardAnimation.isVisible ? `fade-in-delay-${Math.min(index % 4, 3)}` : ''}>
       <Card className="overflow-hidden shadow-soft hover:shadow-hover transition-all bg-gradient-card h-full">
-        <div className="aspect-square bg-secondary/20 flex items-center justify-center relative group">
+        <div className="aspect-square bg-secondary/20 flex items-center justify-center relative group overflow-hidden">
           {cat.images && cat.images.length > 0 ? (
             <>
-              <img
-                src={cat.images[currentImageIndex]}
-                alt={`${cat.name} — ${cat.color} ${cat.breed}`}
-                loading="lazy"
-                className="w-full h-full object-cover transition-opacity duration-500"
-                key={currentImageIndex}
-              />
+              {/* Render all images stacked, only show current one */}
+              {cat.images.map((image, idx) => (
+                <img
+                  key={image}
+                  src={image}
+                  alt={`${cat.name} — ${cat.color} ${cat.breed}`}
+                  loading={index === 0 && idx === 0 ? 'eager' : 'lazy'}
+                  fetchPriority={index === 0 && idx === 0 ? 'high' : 'low'}
+                  decoding="async"
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+                    idx === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
               {hasMultipleImages && (
                 <>
                   {/* Navigation Buttons */}

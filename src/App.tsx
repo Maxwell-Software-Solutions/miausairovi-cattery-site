@@ -11,14 +11,22 @@ import Cats from './pages/Cats';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-import { preloadImages } from './hooks/useImagePreload';
+import { preloadImagesWithPriority } from './hooks/useImagePreload';
 
 const queryClient = new QueryClient();
 
-// All images to preload
-const imagesToPreload = [
-  // Pukis
+// High priority images (first visible on Cats/Gallery pages)
+const highPriorityImages = [
+  // First cat image (Pukis)
   '/assets/cats/Pukis/TICATSJAN25-3798-Edit.jpg',
+  // First two kittens
+  '/assets/cats/Kittens/thumbnail_DSC_0020.jpg',
+  '/assets/cats/Kittens/thumbnail_DSC_0099.jpg',
+];
+
+// Lower priority images (rest of carousel and gallery)
+const lowPriorityImages = [
+  // Rest of Pukis
   '/assets/cats/Pukis/TICATSJAN25-3796-Edit.jpg',
   '/assets/cats/Pukis/TICATSJAN25-3791-Edit.jpg',
   // Afina
@@ -28,9 +36,7 @@ const imagesToPreload = [
   // Esmy
   '/assets/cats/Esmy/thumbnail_DSC_7929.jpg',
   '/assets/cats/Esmy/thumbnail_DSC_6854-Edit.jpg',
-  // Kittens
-  '/assets/cats/Kittens/thumbnail_DSC_0020.jpg',
-  '/assets/cats/Kittens/thumbnail_DSC_0099.jpg',
+  // Rest of Kittens
   '/assets/cats/Kittens/thumbnail_DSC_1422.jpg',
   '/assets/cats/Kittens/thumbnail_DSC_2533.jpg',
   '/assets/cats/Kittens/thumbnail_DSC_2787.jpg',
@@ -39,9 +45,9 @@ const imagesToPreload = [
 ];
 
 const App = () => {
-  // Preload all images when app mounts
+  // Preload images with priority when app mounts
   useEffect(() => {
-    preloadImages(imagesToPreload);
+    preloadImagesWithPriority(highPriorityImages, lowPriorityImages);
   }, []);
 
   return (

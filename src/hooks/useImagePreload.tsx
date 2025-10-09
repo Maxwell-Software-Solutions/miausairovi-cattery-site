@@ -42,3 +42,20 @@ export const preloadImages = (imageUrls: string[]) => {
     img.src = url;
   });
 };
+
+// Preload images with priority (high priority images first)
+export const preloadImagesWithPriority = (highPriorityUrls: string[], lowPriorityUrls: string[]) => {
+  // Load high priority images immediately
+  highPriorityUrls.forEach((url) => {
+    const img = new Image();
+    img.src = url;
+  });
+
+  // Load low priority images after a short delay
+  setTimeout(() => {
+    lowPriorityUrls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+    });
+  }, 500);
+};

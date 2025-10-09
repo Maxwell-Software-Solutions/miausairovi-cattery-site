@@ -67,7 +67,14 @@ const KittenCard = ({ kitten, index }: { kitten: Kitten; index: number }) => {
     <div ref={cardAnimation.ref} className={cardAnimation.isVisible ? `fade-in-delay-${Math.min(index % 4, 3)}` : ''}>
       <Card className="overflow-hidden shadow-soft hover:shadow-hover transition-all bg-gradient-card">
         <div className="aspect-square bg-secondary/20 flex items-center justify-center">
-          <img src={kitten.image} alt={kitten.name} loading="lazy" className="w-full h-full object-cover" />
+          <img
+            src={kitten.image}
+            alt={kitten.name}
+            loading={index < 4 ? 'eager' : 'lazy'}
+            fetchPriority={index < 2 ? 'high' : 'low'}
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="p-4">
           <h3 className="font-bold mb-1">{kitten.name}</h3>
