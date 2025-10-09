@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "@/hooks/use-toast";
 import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
@@ -18,6 +19,7 @@ const Contact = () => {
     email: "",
     phone: "",
     message: "",
+    callSchedule: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -45,6 +47,7 @@ const Contact = () => {
       email: "",
       phone: "",
       message: "",
+      callSchedule: "",
     });
   };
 
@@ -126,6 +129,25 @@ const Contact = () => {
                     rows={6}
                     required
                   />
+                </div>
+
+                <div>
+                  <Label htmlFor="callSchedule">Schedule a Call (Optional)</Label>
+                  <Select
+                    value={formData.callSchedule}
+                    onValueChange={(value) => setFormData({ ...formData, callSchedule: value })}
+                  >
+                    <SelectTrigger id="callSchedule" className="w-full">
+                      <SelectValue placeholder="Select a preferred time slot" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-background z-50">
+                      <SelectItem value="morning-9-12">Morning (9am - 12pm)</SelectItem>
+                      <SelectItem value="afternoon-12-3">Afternoon (12pm - 3pm)</SelectItem>
+                      <SelectItem value="afternoon-3-6">Late Afternoon (3pm - 6pm)</SelectItem>
+                      <SelectItem value="weekend-morning">Weekend Morning (10am - 12pm)</SelectItem>
+                      <SelectItem value="weekend-afternoon">Weekend Afternoon (12pm - 4pm)</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 <Button type="submit" size="lg" className="w-full">
