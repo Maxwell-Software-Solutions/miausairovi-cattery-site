@@ -1,59 +1,58 @@
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "@/hooks/use-toast";
-import { Mail, MapPin } from "lucide-react";
-import { useState } from "react";
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { toast } from '@/hooks/use-toast';
+import { Mail, MapPin } from 'lucide-react';
+import { useState } from 'react';
+import { Reviews } from '@/components/Reviews';
 
 const Contact = () => {
   const header = useScrollAnimation();
   const form = useScrollAnimation();
   const info = useScrollAnimation();
-  
+
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    callSchedule: "",
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    callSchedule: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
-        variant: "destructive",
+        title: 'Missing Information',
+        description: 'Please fill in all required fields.',
+        variant: 'destructive',
       });
       return;
     }
 
     // Here you'll connect this to your email service later
     toast({
-      title: "Message Sent!",
+      title: 'Message Sent!',
       description: "Thank you for your inquiry. We'll get back to you soon.",
     });
 
     // Reset form
     setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-      callSchedule: "",
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      callSchedule: '',
     });
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -63,10 +62,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-24 pb-20 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div ref={header.ref} className={header.isVisible ? "fade-in" : ""}>
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Get in Touch
-          </h1>
+        <div ref={header.ref} className={header.isVisible ? 'fade-in' : ''}>
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">Get in Touch</h1>
           <p className="text-center text-muted-foreground text-lg mb-12 max-w-2xl mx-auto">
             Have questions about our cats or kittens? We'd love to hear from you.
           </p>
@@ -74,10 +71,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Form */}
-          <div
-            ref={form.ref}
-            className={`lg:col-span-2 ${form.isVisible ? "fade-in" : ""}`}
-          >
+          <div ref={form.ref} className={`lg:col-span-2 ${form.isVisible ? 'fade-in' : ''}`}>
             <Card className="p-6 md:p-8 shadow-soft bg-gradient-card">
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -158,13 +152,10 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div
-            ref={info.ref}
-            className={info.isVisible ? "fade-in-delay-1" : ""}
-          >
+          <div ref={info.ref} className={info.isVisible ? 'fade-in-delay-1' : ''}>
             <Card className="p-6 shadow-soft bg-gradient-card h-full">
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -172,9 +163,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-sm text-muted-foreground">
-                      info@miausairovi.com
-                    </p>
+                    <p className="text-sm text-muted-foreground">info@miausairovi.com</p>
                   </div>
                 </div>
 
@@ -185,7 +174,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
                     <p className="text-sm text-muted-foreground">
-                      Peterborough, UK<br />
+                      Peterborough, UK
+                      <br />
                       Available by appointment
                     </p>
                   </div>
@@ -195,13 +185,20 @@ const Contact = () => {
               <div className="mt-8 pt-6 border-t border-border">
                 <h3 className="font-semibold mb-2">Office Hours</h3>
                 <p className="text-sm text-muted-foreground">
-                  Monday - Friday: 9am - 6pm<br />
-                  Saturday: 10am - 4pm<br />
+                  Monday - Friday: 9am - 6pm
+                  <br />
+                  Saturday: 10am - 4pm
+                  <br />
                   Sunday: By appointment
                 </p>
               </div>
             </Card>
           </div>
+        </div>
+
+        {/* Reviews Section */}
+        <div className="mt-16">
+          <Reviews title="Hear from Our Happy Clients" />
         </div>
       </div>
     </div>

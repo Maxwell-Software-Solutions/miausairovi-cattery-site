@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { Heart, Shield, Home as HomeIcon, Award, Stethoscope, Users } from 'lucide-react';
+import { Reviews } from '@/components/Reviews';
 
 const Home = () => {
   const hero = useScrollAnimation();
@@ -79,8 +80,11 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <Reviews />
+
       {/* CTA Section */}
-      <section ref={cta.ref} className={`py-20 px-4 ${cta.isVisible ? 'fade-in' : ''}`}>
+      <section ref={cta.ref} className={`py-20 px-4 bg-secondary/30 ${cta.isVisible ? 'fade-in' : ''}`}>
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Looking for Your Perfect Companion?</h2>
           <p className="text-lg text-muted-foreground mb-8">
