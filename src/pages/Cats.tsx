@@ -18,7 +18,7 @@ const cats: Cat[] = [
   {
     id: 1,
     name: 'Pukis',
-    breed: 'british longhair',
+    breed: 'British Longhair',
     color: 'Golden Shaded',
     description: 'Our boy Grand Champion Diamondglow Pukis of Miausairovi.',
     titles: 'Grand Champion Pukis',
