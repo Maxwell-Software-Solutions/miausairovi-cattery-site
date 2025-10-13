@@ -52,18 +52,29 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
+      // Using FormSubmit.co - a free form backend service
+      // No API keys needed, no backend required
+      const response = await fetch('https://formsubmit.co/ajax/vita.brasiunaite@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          message: formData.message,
+          callSchedule: formData.callSchedule || 'Not specified',
+          _subject: `New Inquiry from ${formData.name}`,
+          _template: 'table',
+        }),
       });
 
       const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to send message');
+      if (!response.ok || data.success === false) {
+        throw new Error('Failed to send message');
       }
 
       toast({
@@ -83,7 +94,7 @@ const Contact = () => {
       console.error('Form submission error:', error);
       toast({
         title: 'Error',
-        description: error instanceof Error ? error.message : 'Failed to send message. Please try again.',
+        description: 'Failed to send message. Please try again.',
         variant: 'destructive',
       });
     } finally {
