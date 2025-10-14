@@ -1,0 +1,268 @@
+{
+  "cats": [
+    {
+      "name": "Pukis",
+      "breed": "British Longhair",
+      "color": "Golden Shaded",
+      "titles": "Grand Champion Pukis",
+      "images": [
+        {
+          "src": "/assets/cats/Pukis/TICATSJAN25-3798-Edit.jpg",
+          "alt": "Pukis - British Longhair"
+        },
+        {
+          "src": "/assets/cats/Pukis/TICATSJAN25-3796-Edit.jpg",
+          "alt": "Pukis - British Longhair"
+        },
+        {
+          "src": "/assets/cats/Pukis/TICATSJAN25-3791-Edit.jpg",
+          "alt": "Pukis - British Longhair"
+        }
+      ],
+      "featured": true,
+      "order": 1,
+      "slug": "pukis",
+      "description": "Our boy Grand Champion Diamondglow Pukis of Miausairovi."
+    },
+    {
+      "name": "Afina",
+      "breed": "Scottish Fold",
+      "color": "Marble",
+      "titles": "RW QGC Magic Marble",
+      "images": [
+        {
+          "src": "/assets/cats/Afina/thumbnail_DSC_7997.jpg",
+          "alt": "Afina - Scottish Fold"
+        },
+        {
+          "src": "/assets/cats/Afina/thumbnail_DSC_7546.jpg",
+          "alt": "Afina - Scottish Fold"
+        },
+        {
+          "src": "/assets/cats/Afina/aUntitled-1.png",
+          "alt": "Afina - Scottish Fold"
+        }
+      ],
+      "featured": true,
+      "order": 2,
+      "slug": "afina",
+      "description": "RW QGC Magic Marble Afina. Scottish fold girl."
+    },
+    {
+      "name": "Esmy",
+      "breed": "British Longhair",
+      "color": "Female",
+      "titles": "Miausairovi",
+      "images": [
+        {
+          "src": "/assets/cats/Esmy/thumbnail_DSC_7929.jpg",
+          "alt": "Esmy - British Longhair"
+        },
+        {
+          "src": "/assets/cats/Esmy/thumbnail_DSC_6854-Edit.jpg",
+          "alt": "Esmy - British Longhair"
+        }
+      ],
+      "featured": true,
+      "order": 3,
+      "slug": "esmy",
+      "description": "Miausairovi Esmy, British longhair female."
+    }
+  ],
+  "kittens": [
+    {
+      "name": "Kitten 1",
+      "age": "8 weeks",
+      "status": "available",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_0020.jpg",
+      "slug": "kitten-1",
+      "description": "Available 8 weeks old kitten."
+    },
+    {
+      "name": "Kitten 2",
+      "age": "6 weeks",
+      "status": "available",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_0099.jpg",
+      "slug": "kitten-2",
+      "description": "Available 6 weeks old kitten."
+    },
+    {
+      "name": "Kitten 3",
+      "age": "10 weeks",
+      "status": "available",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_1422.jpg",
+      "slug": "kitten-3",
+      "description": "Available 10 weeks old kitten."
+    },
+    {
+      "name": "Kitten 4",
+      "age": "7 weeks",
+      "status": "available",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_2533.jpg",
+      "slug": "kitten-4",
+      "description": "Available 7 weeks old kitten."
+    },
+    {
+      "name": "Kitten 5",
+      "age": "9 weeks",
+      "status": "available",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_2787.jpg",
+      "slug": "kitten-5",
+      "description": "Available 9 weeks old kitten."
+    },
+    {
+      "name": "Kitten 6",
+      "age": "5 weeks",
+      "status": "available",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_9882.jpg",
+      "slug": "kitten-6",
+      "description": "Available 5 weeks old kitten."
+    },
+    {
+      "name": "Kitten 7",
+      "age": "11 weeks",
+      "status": "available",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_9909.jpg",
+      "slug": "kitten-7",
+      "description": "Available 11 weeks old kitten."
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Emma Williams",
+      "rating": 5,
+      "date": "July 2024",
+      "platform": "facebook",
+      "featured": true,
+      "slug": "emma-williams",
+      "description": "Professional, ethical, and passionate breeders. They took time to answer all our questions and made sure we were the right fit for their kitten. The follow-up support has been amazing. Our kitten is thriving!"
+    },
+    {
+      "name": "Michael Chen",
+      "rating": 5,
+      "date": "August 2024",
+      "platform": "facebook",
+      "featured": true,
+      "slug": "michael-chen",
+      "description": "Exceptional cattery! The attention to detail and care for their cats is evident in every aspect. Our Persian kitten is absolutely gorgeous and has the sweetest temperament. Thank you for our perfect companion!"
+    },
+    {
+      "name": "Sarah Johnson",
+      "rating": 5,
+      "date": "September 2024",
+      "platform": "facebook",
+      "featured": true,
+      "slug": "sarah-johnson",
+      "description": "We got our beautiful British Shorthair kitten from Miausairovi and couldn't be happier! The breeder was so knowledgeable and caring. Our kitten came home healthy, well-socialized, and with all the documentation. Highly recommend!"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How much does a British Shorthair kitten cost?",
+      "category": "adoption",
+      "order": 1,
+      "slug": "how-much-does-a-british-shorthair-kitten-cost",
+      "description": "Our British Shorthair kittens are priced between £800-£1,500 depending on color, pedigree, and show quality. The price includes first vaccinations, health check, microchip, GCCF registration, and a kitten starter pack with food and toys."
+    },
+    {
+      "question": "Where is Miausairovi Cattery located?",
+      "category": "general",
+      "order": 2,
+      "slug": "where-is-miausairovi-cattery-located",
+      "description": "We are based in Peterborough, UK. We welcome visitors by appointment to meet our cats and kittens. We offer worldwide shipping with professional pet transport services and can arrange safe delivery to your location."
+    },
+    {
+      "question": "Are your kittens and breeding cats health tested?",
+      "category": "health",
+      "order": 3,
+      "slug": "are-your-kittens-and-breeding-cats-health-tested",
+      "description": "Yes, absolutely. All our breeding cats are health tested for HCM (heart disease), PKD (kidney disease), and FeLV/FIV. Kittens are vet checked, vaccinated, microchipped, and come with health certificates. We prioritize the health and wellbeing of our cats above all else."
+    },
+    {
+      "question": "What vaccinations do kittens receive?",
+      "category": "health",
+      "order": 4,
+      "slug": "what-vaccinations-do-kittens-receive",
+      "description": "All kittens receive their first vaccination (covering feline herpesvirus, calicivirus, and panleukopenia) before leaving at 13 weeks. We provide a vaccination card and recommend the second vaccination at 16 weeks from your local vet."
+    },
+    {
+      "question": "When can kittens go to their new homes?",
+      "category": "adoption",
+      "order": 5,
+      "slug": "when-can-kittens-go-to-their-new-homes",
+      "description": "Our kittens are ready to go to their new homes at 13 weeks of age. This ensures they are fully weaned, litter trained, socialized, and have received their first vaccination. Early socialization is crucial for developing confident, well-adjusted cats."
+    },
+    {
+      "question": "Are your cats GCCF registered?",
+      "category": "general",
+      "order": 6,
+      "slug": "are-your-cats-gccf-registered",
+      "description": "Yes, all our breeding cats are registered with the Governing Council of the Cat Fancy (GCCF), the UK premier cat registry. All kittens are also registered and come with GCCF pedigree certificates showing their lineage."
+    },
+    {
+      "question": "Can I visit the cattery before reserving a kitten?",
+      "category": "adoption",
+      "order": 7,
+      "slug": "can-i-visit-the-cattery-before-reserving-a-kitten",
+      "description": "Absolutely! We encourage potential owners to visit and meet our cats and kittens. This helps you understand our breeding philosophy and ensures our kittens are a good fit for your family. Please contact us to schedule an appointment."
+    },
+    {
+      "question": "What is your breeding philosophy?",
+      "category": "general",
+      "order": 8,
+      "slug": "what-is-your-breeding-philosophy",
+      "description": "We breed for health, temperament, and breed standard. Our cats are raised as part of our family in a home environment. We focus on producing well-socialized, healthy kittens with excellent temperaments. We limit the number of litters to ensure each cat and kitten receives individual attention and care."
+    },
+    {
+      "question": "How do I reserve a kitten?",
+      "category": "adoption",
+      "order": 9,
+      "slug": "how-do-i-reserve-a-kitten",
+      "description": "To reserve a kitten, please contact us to discuss availability. We require a non-refundable deposit to secure your reservation. We will keep you updated with photos and videos as your kitten grows. Final payment is due when you collect your kitten at 13 weeks."
+    },
+    {
+      "question": "Do you ship kittens internationally?",
+      "category": "adoption",
+      "order": 10,
+      "slug": "do-you-ship-kittens-internationally",
+      "description": "Yes! We offer worldwide shipping with IATA-compliant professional pet transport. We handle all export documentation, health certificates, and coordinate door-to-door delivery. International clients can also visit our cattery in Peterborough, or we provide regular video calls to see your kitten's development."
+    },
+    {
+      "question": "What colors do you breed?",
+      "category": "general",
+      "order": 11,
+      "slug": "what-colors-do-you-breed",
+      "description": "We specialize in British Shorthair cats and currently breed blue, lilac, and cream colors. Each color has its own unique charm. Check our breeding cats and available kittens pages to see our current colors."
+    },
+    {
+      "question": "What is included when I purchase a kitten?",
+      "category": "adoption",
+      "order": 12,
+      "slug": "what-is-included-when-i-purchase-a-kitten",
+      "description": "Your kitten comes with: GCCF registration certificate, 5-generation pedigree, vaccination record, microchip, health check certificate, food sample, toy with familiar scent, care guide, and lifetime breeder support. We're always here to answer questions!"
+    },
+    {
+      "question": "What should I prepare before bringing my kitten home?",
+      "category": "care",
+      "order": 13,
+      "slug": "what-should-i-prepare-before-bringing-my-kitten-home",
+      "description": "You'll need: a litter tray and litter, food and water bowls, kitten food (we provide recommendations), scratching post, safe toys, cozy bed, and a cat carrier. We provide a detailed care guide with all recommendations for a smooth transition."
+    },
+    {
+      "question": "Are British Shorthair cats good with children and other pets?",
+      "category": "care",
+      "order": 14,
+      "slug": "are-british-shorthair-cats-good-with-children-and-other-pets",
+      "description": "Yes! British Shorthairs are known for their gentle, patient temperament. They typically get along well with children and other pets when properly introduced. Our kittens are socialized with people and other cats from birth, making them confident and adaptable."
+    },
+    {
+      "question": "Do you offer any guarantees?",
+      "category": "health",
+      "order": 15,
+      "slug": "do-you-offer-any-guarantees",
+      "description": "Yes, all kittens come with a health guarantee. If any genetic health issues arise within the first year, we will work with you to resolve the situation. We stand behind the health and quality of our kittens and provide lifetime support."
+    }
+  ],
+  "homepage": {},
+  "settings": {}
+}

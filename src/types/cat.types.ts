@@ -6,8 +6,8 @@
  * Represents a breeding cat in the cattery
  */
 export interface Cat {
-  /** Unique identifier for the cat */
-  id: number;
+  /** Unique slug identifier for the cat */
+  slug: string;
   /** Name of the cat */
   name: string;
   /** Breed of the cat */
@@ -17,9 +17,13 @@ export interface Cat {
   /** Detailed description of the cat */
   description: string;
   /** Titles and achievements */
-  titles: string;
-  /** Array of image URLs for the cat */
-  images?: string[];
+  titles: string | string[];
+  /** Array of images with src and alt text */
+  images?: Array<{ src: string; alt: string }>;
+  /** Whether the cat is featured */
+  featured: boolean;
+  /** Sort order */
+  order: number;
 }
 
 /**

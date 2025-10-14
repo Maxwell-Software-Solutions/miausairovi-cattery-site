@@ -29,7 +29,7 @@ export interface PageHeaderProps {
  * Props for image carousel
  */
 export interface ImageCarouselProps {
-  images: string[];
+  images: string[] | Array<{ src: string; alt: string }>;
   alt: string;
   autoRotate?: boolean;
   rotateInterval?: number;

@@ -17,32 +17,36 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
   priority = false,
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const hasMultipleImages = images.length > 1;
+
+  // Normalize images to always be strings
+  const normalizedImages = Array.isArray(images) ? images.map((img) => (typeof img === 'string' ? img : img.src)) : [];
+
+  const hasMultipleImages = normalizedImages.length > 1;
 
   // Auto-rotate images
   useEffect(() => {
     if (!hasMultipleImages || !autoRotate) return;
 
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+      setCurrentImageIndex((prev) => (prev + 1) % normalizedImages.length);
     }, rotateInterval);
 
     return () => clearInterval(interval);
-  }, [images.length, hasMultipleImages, autoRotate, rotateInterval]);
+  }, [normalizedImages.length, hasMultipleImages, autoRotate, rotateInterval]);
 
   const goToNextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    setCurrentImageIndex((prev) => (prev + 1) % normalizedImages.length);
   };
 
   const goToPreviousImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    setCurrentImageIndex((prev) => (prev - 1 + normalizedImages.length) % normalizedImages.length);
   };
 
   const goToImage = (index: number) => {
     setCurrentImageIndex(index);
   };
 
-  if (images.length === 0) {
+  if (normalizedImages.length === 0) {
     return (
       <div className="aspect-square bg-secondary/20 flex items-center justify-center">
         <div className="text-center text-muted-foreground">
@@ -56,7 +60,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
   return (
     <div className="aspect-square bg-secondary/20 flex items-center justify-center relative group overflow-hidden">
       {/* Images */}
-      {images.map((image, idx) => (
+      {normalizedImages.map((image, idx) => (
         <img
           key={image}
           src={image}
@@ -97,7 +101,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
           {/* Dot Indicators */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {images.map((_, idx) => (
+            {normalizedImages.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => goToImage(idx)}

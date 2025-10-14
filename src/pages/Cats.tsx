@@ -2,14 +2,18 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { SEO } from '@/components/common/SEO';
 import { BreadcrumbSchema } from '@/components/common/StructuredData';
 import { CatCard } from '@/components/features/cats/CatCard';
-import { catsData } from '@/data/cats.data';
 import { PAGE_CONTENT } from '@/config/constants';
+// Import generated data from Keystatic
+import keystaticData from '@/generated/keystatic-data.json';
 
 const Cats = () => {
   const breadcrumbItems = [
     { name: 'Home', url: 'https://miausairovi.com/' },
     { name: 'Our Breeding Cats', url: 'https://miausairovi.com/cats' },
   ];
+
+  // Use cats from generated Keystatic data
+  const cats = keystaticData.cats;
 
   return (
     <>
@@ -33,8 +37,8 @@ const Cats = () => {
           <PageHeader title={PAGE_CONTENT.cats.title} subtitle={PAGE_CONTENT.cats.subtitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {catsData.map((cat, index) => (
-              <CatCard key={cat.id} cat={cat} index={index} />
+            {cats.map((cat, index) => (
+              <CatCard key={cat.slug} cat={cat} index={index} />
             ))}
           </div>
 
