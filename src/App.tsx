@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Cats from './pages/Cats';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
 import NotFound from './pages/NotFound';
 import { preloadImagesWithPriority } from './hooks/useImagePreload';
 import { HIGH_PRIORITY_IMAGES, LOW_PRIORITY_IMAGES } from './config/images';
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/cats" element={<Cats />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

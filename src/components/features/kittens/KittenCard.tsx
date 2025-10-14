@@ -6,7 +6,7 @@
 import { Card } from '@/components/ui/card';
 import { StatusBadge } from '@/components/common/StatusBadge';
 import { AnimatedSection } from '@/components/common/AnimatedSection';
-import { KittenCardProps } from '@/types/kitten.types';
+import { KittenCardProps, KittenStatus } from '@/types/kitten.types';
 import { AnimationDelay } from '@/types/common.types';
 
 export const KittenCard: React.FC<KittenCardProps> = ({ kitten, index }) => {
@@ -18,7 +18,9 @@ export const KittenCard: React.FC<KittenCardProps> = ({ kitten, index }) => {
         <div className="aspect-square bg-secondary/20 flex items-center justify-center">
           <img
             src={kitten.image}
-            alt={kitten.name}
+            alt={`${kitten.name}, ${kitten.age} ${
+              kitten.status === 'available' ? 'available' : ''
+            } British Shorthair kitten at Miausairovi Cattery Peterborough UK`}
             loading={index < 4 ? 'eager' : 'lazy'}
             fetchPriority={index < 2 ? 'high' : 'low'}
             decoding="async"

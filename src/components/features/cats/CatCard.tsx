@@ -17,7 +17,7 @@ export const CatCard: React.FC<CatCardProps> = ({ cat, index }) => {
       <Card className="overflow-hidden shadow-soft hover:shadow-hover transition-all bg-gradient-card h-full">
         <ImageCarousel
           images={cat.images || []}
-          alt={`${cat.name} — ${cat.color} ${cat.breed}`}
+          alt={`${cat.name}, ${cat.color} ${cat.breed} breeding cat at Miausairovi Cattery Peterborough`}
           priority={index === 0}
         />
         <div className="p-6">

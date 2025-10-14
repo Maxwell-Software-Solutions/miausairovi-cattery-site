@@ -17,7 +17,11 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt={APP_CONFIG.siteName} className="h-12 md:h-14" />
+            <img
+              src={logo}
+              alt="Miausairovi Cattery - British Shorthair Breeder Peterborough UK"
+              className="h-12 md:h-14"
+            />
             <span className="text-2xl font-bold text-primary">{APP_CONFIG.siteName}</span>
           </Link>
 
