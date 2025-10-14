@@ -39,8 +39,8 @@ Your Keystatic CMS is configured to use **GitHub mode**, which allows you to edi
    KEYSTATIC_SECRET=your_random_secret_here
    
    # Keep your existing auth credentials
-   VITE_ADMIN_USERNAME=admin
-   VITE_ADMIN_PASSWORD=NEmcG!1!abiw$LHy#^4C$*l
+   VITE_ADMIN_USERNAME=your_username_here
+   VITE_ADMIN_PASSWORD=your_secure_password_here
    ```
 
    **To generate KEYSTATIC_SECRET:**
@@ -57,8 +57,8 @@ Add the GitHub credentials to your local `.env` file for local development:
 
 ```env
 # Existing admin credentials
-VITE_ADMIN_USERNAME=admin
-VITE_ADMIN_PASSWORD=NEmcG!1!abiw$LHy#^4C$*l
+VITE_ADMIN_USERNAME=your_username_here
+VITE_ADMIN_PASSWORD=your_secure_password_here
 
 # GitHub OAuth (for production)
 KEYSTATIC_GITHUB_CLIENT_ID=your_client_id_here
