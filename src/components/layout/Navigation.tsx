@@ -1,19 +1,14 @@
-import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import logo from '@/assets/logo.png';
+import { NAV_LINKS } from '@/config/navigation';
+import { APP_CONFIG } from '@/config/constants';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
-  const links = [
-    { path: "/", label: "Home" },
-    { path: "/cats", label: "Our Cats" },
-    { path: "/gallery", label: "Kittens" },
-    { path: "/contact", label: "Contact" },
-  ];
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -22,18 +17,18 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Miausairovi Cattery" className="h-12 md:h-14" />
-            <span className="text-2xl font-bold text-primary">Miausairovi Cattery</span>
+            <img src={logo} alt={APP_CONFIG.siteName} className="h-12 md:h-14" />
+            <span className="text-2xl font-bold text-primary">{APP_CONFIG.siteName}</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {links.map((link) => (
+            {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(link.path) ? "text-primary" : "text-foreground/70"
+                  isActive(link.path) ? 'text-primary' : 'text-foreground/70'
                 }`}
               >
                 {link.label}
@@ -42,12 +37,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
@@ -55,13 +45,13 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pt-4 pb-2 flex flex-col gap-4">
-            {links.map((link) => (
+            {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(link.path) ? "text-primary" : "text-foreground/70"
+                  isActive(link.path) ? 'text-primary' : 'text-foreground/70'
                 }`}
               >
                 {link.label}

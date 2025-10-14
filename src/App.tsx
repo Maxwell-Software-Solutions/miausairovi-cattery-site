@@ -4,50 +4,22 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import Navigation from './components/layout/Navigation';
+import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Cats from './pages/Cats';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import { preloadImagesWithPriority } from './hooks/useImagePreload';
+import { HIGH_PRIORITY_IMAGES, LOW_PRIORITY_IMAGES } from './config/images';
 
 const queryClient = new QueryClient();
-
-// High priority images (first visible on Cats/Gallery pages)
-const highPriorityImages = [
-  // First cat image (Pukis)
-  '/assets/cats/Pukis/TICATSJAN25-3798-Edit.jpg',
-  // First two kittens
-  '/assets/cats/Kittens/thumbnail_DSC_0020.jpg',
-  '/assets/cats/Kittens/thumbnail_DSC_0099.jpg',
-];
-
-// Lower priority images (rest of carousel and gallery)
-const lowPriorityImages = [
-  // Rest of Pukis
-  '/assets/cats/Pukis/TICATSJAN25-3796-Edit.jpg',
-  '/assets/cats/Pukis/TICATSJAN25-3791-Edit.jpg',
-  // Afina
-  '/assets/cats/Afina/thumbnail_DSC_7997.jpg',
-  '/assets/cats/Afina/thumbnail_DSC_7546.jpg',
-  '/assets/cats/Afina/aUntitled-1.png',
-  // Esmy
-  '/assets/cats/Esmy/thumbnail_DSC_7929.jpg',
-  '/assets/cats/Esmy/thumbnail_DSC_6854-Edit.jpg',
-  // Rest of Kittens
-  '/assets/cats/Kittens/thumbnail_DSC_1422.jpg',
-  '/assets/cats/Kittens/thumbnail_DSC_2533.jpg',
-  '/assets/cats/Kittens/thumbnail_DSC_2787.jpg',
-  '/assets/cats/Kittens/thumbnail_DSC_9882.jpg',
-  '/assets/cats/Kittens/thumbnail_DSC_9909.jpg',
-];
 
 const App = () => {
   // Preload images with priority when app mounts
   useEffect(() => {
-    preloadImagesWithPriority(highPriorityImages, lowPriorityImages);
+    preloadImagesWithPriority(HIGH_PRIORITY_IMAGES, LOW_PRIORITY_IMAGES);
   }, []);
 
   return (

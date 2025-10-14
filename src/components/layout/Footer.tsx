@@ -1,5 +1,7 @@
-import { Mail, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { APP_CONFIG, CONTACT_INFO } from '@/config/constants';
+import { FOOTER_LINKS } from '@/config/navigation';
 
 const Footer = () => {
   return (
@@ -7,38 +9,42 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4 text-primary">Miausairovi Cattery</h3>
-            <p className="text-sm text-muted-foreground">
-              Professional cat breeding with love and dedication. Raising healthy, beautiful cats in a family environment.
-            </p>
+            <h3 className="text-lg font-bold mb-4 text-primary">{APP_CONFIG.siteName}</h3>
+            <p className="text-sm text-muted-foreground">{APP_CONFIG.siteDescription}</p>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/cats" className="hover:text-primary transition-colors">Our Cats</Link></li>
-              <li><Link to="/gallery" className="hover:text-primary transition-colors">Kittens Gallery</Link></li>
-              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
+              {FOOTER_LINKS.map((link) => (
+                <li key={link.path}>
+                  <Link to={link.path} className="hover:text-primary transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@miausairovi.com</span>
+                <span>{CONTACT_INFO.email}</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Peterborough, UK</span>
+                <span>{CONTACT_INFO.location}</span>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Miausairovi Cattery. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} {APP_CONFIG.siteName}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
