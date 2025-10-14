@@ -82,37 +82,37 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <AnimatedSection delay={1}>
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-soft">
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900">Local Areas We Serve</h3>
-                  <ul className="space-y-3 text-slate-700">
+                <div className="bg-gradient-to-br from-secondary to-secondary/50 rounded-xl p-8 shadow-soft border border-border">
+                  <h3 className="text-2xl font-bold mb-4 text-foreground">Local Areas We Serve</h3>
+                  <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">✓</span>
+                      <span className="text-primary mr-2">✓</span>
                       <span>
-                        <strong>Peterborough</strong> - Our home base
+                        <strong className="text-foreground">Peterborough</strong> - Our home base
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">✓</span>
+                      <span className="text-primary mr-2">✓</span>
                       <span>
-                        <strong>Cambridge</strong> - 40 minutes south
+                        <strong className="text-foreground">Cambridge</strong> - 40 minutes south
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">✓</span>
+                      <span className="text-primary mr-2">✓</span>
                       <span>
-                        <strong>Huntingdon</strong> - Easy access
+                        <strong className="text-foreground">Huntingdon</strong> - Easy access
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">✓</span>
+                      <span className="text-primary mr-2">✓</span>
                       <span>
-                        <strong>Stamford</strong> - Quick journey
+                        <strong className="text-foreground">Stamford</strong> - Quick journey
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-blue-600 mr-2">✓</span>
+                      <span className="text-primary mr-2">✓</span>
                       <span>
-                        <strong>Corby, Kettering, Spalding</strong> - Welcome visitors
+                        <strong className="text-foreground">Corby, Kettering, Spalding</strong> - Welcome visitors
                       </span>
                     </li>
                   </ul>
@@ -120,37 +120,42 @@ const Home = () => {
               </AnimatedSection>
 
               <AnimatedSection delay={2}>
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 shadow-soft">
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900">Why Visit Us?</h3>
-                  <ul className="space-y-3 text-slate-700">
+                <div className="bg-gradient-to-br from-accent/20 to-accent/10 rounded-xl p-8 shadow-soft border border-border">
+                  <h3 className="text-2xl font-bold mb-4 text-foreground">Why Visit Us?</h3>
+                  <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start">
-                      <span className="text-purple-600 mr-2">🏡</span>
+                      <span className="text-accent mr-2">🏡</span>
                       <span>
-                        <strong>Home Environment:</strong> See our cats living as family members
+                        <strong className="text-foreground">Home Environment:</strong> See our cats living as family
+                        members
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-purple-600 mr-2">👨‍👩‍👧</span>
+                      <span className="text-accent mr-2">👨‍👩‍👧</span>
                       <span>
-                        <strong>Meet the Parents:</strong> View pedigree certificates and health records
+                        <strong className="text-foreground">Meet the Parents:</strong> View pedigree certificates and
+                        health records
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-purple-600 mr-2">💙</span>
+                      <span className="text-accent mr-2">💙</span>
                       <span>
-                        <strong>Socialized Kittens:</strong> Well-adjusted and people-friendly
+                        <strong className="text-foreground">Socialized Kittens:</strong> Well-adjusted and
+                        people-friendly
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-purple-600 mr-2">📋</span>
+                      <span className="text-accent mr-2">📋</span>
                       <span>
-                        <strong>Full Documentation:</strong> GCCF registration, health guarantees
+                        <strong className="text-foreground">Full Documentation:</strong> GCCF registration, health
+                        guarantees
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-purple-600 mr-2">🚗</span>
+                      <span className="text-accent mr-2">🚗</span>
                       <span>
-                        <strong>Transport Available:</strong> Safe delivery throughout the UK
+                        <strong className="text-foreground">Transport Available:</strong> Safe delivery throughout the
+                        UK
                       </span>
                     </li>
                   </ul>
@@ -159,11 +164,11 @@ const Home = () => {
             </div>
 
             <AnimatedSection delay={3}>
-              <div className="mt-8 text-center bg-slate-50 rounded-xl p-6">
-                <p className="text-slate-700">
-                  <strong>Traveling from further away?</strong> We can arrange safe, professional pet transport to
-                  London, Birmingham, Manchester, Leeds, and throughout England, Scotland, and Wales. All our kittens
-                  are raised in Peterborough with love and care.
+              <div className="mt-8 text-center bg-muted rounded-xl p-6 border border-border">
+                <p className="text-muted-foreground">
+                  <strong className="text-foreground">Traveling from further away?</strong> We can arrange safe,
+                  professional pet transport to London, Birmingham, Manchester, Leeds, and throughout England, Scotland,
+                  and Wales. All our kittens are raised in Peterborough with love and care.
                 </p>
               </div>
             </AnimatedSection>

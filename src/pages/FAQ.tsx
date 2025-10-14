@@ -4,6 +4,8 @@
  */
 
 import { SEO } from '../components/common/SEO';
+import { PageHeader } from '../components/common/PageHeader';
+import { AnimatedSection } from '../components/common/AnimatedSection';
 import { FAQSchema, BreadcrumbSchema } from '../components/common/StructuredData';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 import { faqData, getFAQsByCategory, getCategoryName, getFAQCategories } from '../data/faq.data';
@@ -39,16 +41,13 @@ export default function FAQ() {
         ]}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-12">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <div className="min-h-screen pt-24 pb-20 px-4">
+        <div className="container mx-auto max-w-4xl">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h1>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Find answers to common questions about British Shorthair kittens, our breeding program, adoption process,
-              and caring for your new companion.
-            </p>
-          </div>
+          <PageHeader
+            title="Frequently Asked Questions"
+            subtitle="Find answers to common questions about British Shorthair kittens, our breeding program, adoption process, and caring for your new companion."
+          />
 
           {/* FAQ Categories */}
           {categories.map((category) => {
@@ -56,8 +55,8 @@ export default function FAQ() {
             if (categoryFAQs.length === 0) return null;
 
             return (
-              <div key={category} className="mb-12">
-                <h2 className="text-2xl font-bold text-slate-900 mb-6 border-b-2 border-blue-600 pb-2">
+              <AnimatedSection key={category} className="mb-12">
+                <h2 className="text-2xl font-bold text-foreground mb-6 border-b-2 border-primary pb-2">
                   {getCategoryName(category)}
                 </h2>
 
@@ -66,62 +65,64 @@ export default function FAQ() {
                     <AccordionItem
                       key={faq.id}
                       value={`faq-${faq.id}`}
-                      className="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden"
+                      className="bg-card rounded-lg shadow-soft border border-border overflow-hidden"
                     >
                       <AccordionTrigger
-                        className="px-6 py-4 text-left hover:bg-slate-50 transition-colors"
+                        className="px-6 py-4 text-left hover:bg-secondary/50 transition-colors"
                         onClick={() => GAEvents.faqExpand(faq.question)}
                       >
-                        <span className="text-lg font-semibold text-slate-900 pr-4">{faq.question}</span>
+                        <span className="text-lg font-semibold text-foreground pr-4">{faq.question}</span>
                       </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-4 text-slate-700 leading-relaxed">
+                      <AccordionContent className="px-6 pb-4 text-muted-foreground leading-relaxed">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
-              </div>
+              </AnimatedSection>
             );
           })}
 
           {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-center text-white shadow-xl">
-            <h2 className="text-3xl font-bold mb-4">Still Have Questions?</h2>
-            <p className="text-lg mb-6 text-blue-50">
-              We are here to help! Contact us directly and we will be happy to answer any questions about our British
-              Shorthair kittens, breeding program, or adoption process.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                onClick={() => GAEvents.ctaClick('FAQ Contact CTA', '/contact')}
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg"
-              >
-                Contact Us
-              </Link>
-              <Link
-                to="/gallery"
-                onClick={() => GAEvents.ctaClick('FAQ Gallery CTA', '/gallery')}
-                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors border-2 border-white"
-              >
-                View Available Kittens
-              </Link>
+          <AnimatedSection className="mt-16">
+            <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-center text-primary-foreground shadow-soft">
+              <h2 className="text-3xl font-bold mb-4">Still Have Questions?</h2>
+              <p className="text-lg mb-6 opacity-90">
+                We are here to help! Contact us directly and we will be happy to answer any questions about our British
+                Shorthair kittens, breeding program, or adoption process.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  onClick={() => GAEvents.ctaClick('FAQ Contact CTA', '/contact')}
+                  className="bg-background text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary transition-colors shadow-lg"
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  to="/gallery"
+                  onClick={() => GAEvents.ctaClick('FAQ Gallery CTA', '/gallery')}
+                  className="bg-primary-foreground/20 text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary-foreground/30 transition-colors border-2 border-primary-foreground/30"
+                >
+                  View Available Kittens
+                </Link>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Quick Links */}
           <div className="mt-12 text-center">
-            <p className="text-slate-600 mb-4">Explore more about our cattery:</p>
+            <p className="text-muted-foreground mb-4">Explore more about our cattery:</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/cats" className="text-blue-600 hover:text-blue-800 font-medium">
+              <Link to="/cats" className="text-primary hover:text-accent font-medium transition-colors">
                 Our Breeding Cats
               </Link>
-              <span className="text-slate-400">•</span>
-              <Link to="/gallery" className="text-blue-600 hover:text-blue-800 font-medium">
+              <span className="text-muted-foreground">•</span>
+              <Link to="/gallery" className="text-primary hover:text-accent font-medium transition-colors">
                 Available Kittens
               </Link>
-              <span className="text-slate-400">•</span>
-              <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium">
+              <span className="text-muted-foreground">•</span>
+              <Link to="/" className="text-primary hover:text-accent font-medium transition-colors">
                 About Us
               </Link>
             </div>
