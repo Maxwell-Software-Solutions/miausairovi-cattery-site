@@ -1,73 +1,232 @@
-# Welcome to your Lovable project
+# Miausairovi Cattery - British Shorthair Breeder Website
 
-## Project info
+Professional website for Miausairovi Cattery, a GCCF registered British Shorthair breeder based in Peterborough, UK.
 
-**URL**: https://lovable.dev/projects/997fc22b-8cdc-4c79-afa6-52429731aed4
+## 🎯 Quick Links
 
-## How can I edit this code?
+- **Live Site**: [miausairovi.com](https://miausairovi.com)
+- **Documentation**: See [`/docs`](./docs) folder for complete documentation
+- **SEO Guide**: [docs/seo/SEO_QUICK_START.md](./docs/seo/SEO_QUICK_START.md)
+- **Analytics Guide**: [docs/analytics/GA_QUICK_START.md](./docs/analytics/GA_QUICK_START.md)
+- **Setup Checklist**: [docs/setup/YOUR_ACTION_CHECKLIST.md](./docs/setup/YOUR_ACTION_CHECKLIST.md)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 📚 Documentation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/997fc22b-8cdc-4c79-afa6-52429731aed4) and start prompting.
+All project documentation is organized in the [`/docs`](./docs) folder:
 
-Changes made via Lovable will be committed automatically to this repo.
+- **`/docs/seo`** - SEO implementation guides and testing checklists
+- **`/docs/analytics`** - Google Analytics setup and event tracking
+- **`/docs/setup`** - Project setup, deployment, and email configuration
+- **`/docs/project`** - Project planning, refactoring, and improvements
 
-**Use your preferred IDE**
+**Start here**: [docs/README.md](./docs/README.md) for complete documentation overview
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Quick Start
 
-Follow these steps:
-
+### Development
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+### Deployment
+See [docs/setup/HOW_TO_RUN_WITH_VERCEL.md](./docs/setup/HOW_TO_RUN_WITH_VERCEL.md) for deployment instructions.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🏗️ Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+miausairovi-cattery-site/
+├── docs/                    # 📚 All documentation
+│   ├── seo/                # SEO guides and checklists
+│   ├── analytics/          # Google Analytics documentation
+│   ├── setup/              # Setup and deployment guides
+│   └── project/            # Project planning documents
+├── src/
+│   ├── components/         # React components
+│   ├── pages/              # Page components (Home, Cats, Gallery, etc.)
+│   ├── config/             # Configuration files (analytics, constants)
+│   ├── data/               # Data files (cats, kittens, FAQs)
+│   ├── services/           # API services (email)
+│   ├── hooks/              # Custom React hooks
+│   └── types/              # TypeScript type definitions
+├── public/                 # Static assets
+│   ├── sitemap.xml         # SEO sitemap
+│   ├── robots.txt          # Search engine directives
+│   └── assets/             # Images and media
+└── api/                    # Serverless API functions (email)
+```
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## ✨ Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 🎨 User Experience
+- Modern, responsive design with Tailwind CSS
+- Smooth animations and transitions
+- Image optimization and lazy loading
+- Mobile-first approach
 
-## How can I deploy this project?
+### 🔍 SEO Optimized
+- Dynamic meta tags for all pages
+- Structured data (JSON-LD schemas)
+- XML sitemap
+- SEO-friendly URLs and image alt text
+- Location-specific content for local SEO
 
-Simply open [Lovable](https://lovable.dev/projects/997fc22b-8cdc-4c79-afa6-52429731aed4) and click on Share -> Publish.
+### 📊 Analytics & Tracking
+- Google Analytics 4 integration
+- Event tracking (form submits, clicks, FAQ interactions)
+- User journey tracking
+- Conversion optimization
 
-## Can I connect a custom domain to my Lovable project?
+### 📧 Contact & Communication
+- Working contact form with MailerSend integration
+- Email validation
+- Form submission tracking
+- Multiple contact methods
 
-Yes, you can!
+### 📄 Content
+- FAQ page with 15+ questions
+- Breeding cats showcase
+- Kittens gallery
+- Customer reviews
+- Location and service area information
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🛠️ Tech Stack
+
+### Core
+- **Framework**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Routing**: React Router
+
+### SEO & Analytics
+- **Meta Tags**: react-helmet-async
+- **Analytics**: react-ga4 (Google Analytics 4)
+- **Structured Data**: JSON-LD schemas
+
+### APIs & Services
+- **Email**: MailerSend API
+- **Deployment**: Vercel
+
+---
+
+## 📈 SEO Implementation
+
+### Completed ✅
+- Meta tags (title, description, keywords) for all pages
+- Open Graph and Twitter Card tags
+- XML sitemap with 5 pages
+- Structured data: LocalBusiness, FAQ, Review, Breadcrumb schemas
+- Image optimization with keyword-rich alt text
+- Internal linking strategy
+- Location-specific content
+- FAQ page targeting long-tail keywords
+
+### In Progress 🔄
+- Google Search Console setup (user action required)
+- Google Business Profile creation (user action required)
+
+See [docs/seo/SEO_IMPLEMENTATION_COMPLETE.md](./docs/seo/SEO_IMPLEMENTATION_COMPLETE.md) for details.
+
+---
+
+## 📊 Analytics Tracking
+
+### Automatic Tracking
+- All page views
+- Session duration and bounce rate
+- Traffic sources
+- User location and device data
+
+### Event Tracking
+- Contact form submissions
+- Email address clicks
+- CTA button clicks
+- FAQ accordion interactions
+- Navigation patterns
+
+See [docs/analytics/GA_ENHANCEMENTS_SUMMARY.md](./docs/analytics/GA_ENHANCEMENTS_SUMMARY.md) for details.
+
+---
+
+## 🎯 Business Goals
+
+- **Local SEO**: Rank in top 10 for "British Shorthair breeder Peterborough"
+- **Traffic Growth**: 100% increase in organic traffic in 6-12 months
+- **Conversions**: Increase contact inquiries through optimized user journey
+- **Authority**: Establish presence as trusted GCCF registered breeder
+
+---
+
+## 📞 Support & Maintenance
+
+### User Actions Required
+1. **Google Search Console**: Verify ownership and submit sitemap
+2. **Google Business Profile**: Create listing with photos and business info
+3. **Directory Submissions**: Submit to GCCF, UK Pet Breeders, Pets4Homes
+4. **Monitor Analytics**: Review GA dashboard weekly for insights
+
+See [docs/setup/YOUR_ACTION_CHECKLIST.md](./docs/setup/YOUR_ACTION_CHECKLIST.md) for complete checklist.
+
+---
+
+## 📝 Development Notes
+
+### Running Locally
+```sh
+npm run dev
+```
+Development server runs on `http://localhost:8080`
+
+### Building for Production
+```sh
+npm run build
+```
+Output in `/dist` folder
+
+### Environment Variables
+No environment variables required for basic functionality. GA measurement ID is in code (public and safe).
+
+---
+
+## Original Lovable Project Info
+
+**Project URL**: https://lovable.dev/projects/997fc22b-8cdc-4c79-afa6-52429731aed4
+
+### Editing Options
+- **Via Lovable**: Visit the project URL and start prompting
+- **Local IDE**: Clone repo, make changes, push to sync
+- **GitHub**: Edit files directly on GitHub
+- **Codespaces**: Use GitHub Codespaces for cloud development
+
+---
+
+## 🎉 Project Status
+
+- ✅ **Production Ready**
+- ✅ **SEO Optimized**
+- ✅ **Analytics Integrated**
+- ✅ **Fully Documented**
+- 🔄 **Pending**: User actions for Google services
+
+---
+
+*Last Updated: October 14, 2025*  
+*Project: Miausairovi Cattery Website*  
+*Version: 1.0*  
+*Status: Live & Operational*

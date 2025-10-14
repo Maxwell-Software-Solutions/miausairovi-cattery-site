@@ -2,6 +2,7 @@ import { Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { APP_CONFIG, CONTACT_INFO } from '@/config/constants';
 import { FOOTER_LINKS } from '@/config/navigation';
+import { GAEvents } from '@/config/analytics';
 
 const Footer = () => {
   return (
@@ -31,7 +32,13 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>{CONTACT_INFO.email}</span>
+                <a
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  onClick={() => GAEvents.emailClick(CONTACT_INFO.email)}
+                  className="hover:text-primary transition-colors"
+                >
+                  {CONTACT_INFO.email}
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />

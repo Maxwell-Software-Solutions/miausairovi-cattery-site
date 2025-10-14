@@ -9,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '..
 import { faqData, getFAQsByCategory, getCategoryName, getFAQCategories } from '../data/faq.data';
 import type { FAQ as FAQType } from '../data/faq.data';
 import { Link } from 'react-router-dom';
+import { GAEvents } from '../config/analytics';
 
 export default function FAQ() {
   const categories = getFAQCategories();
@@ -67,7 +68,10 @@ export default function FAQ() {
                       value={`faq-${faq.id}`}
                       className="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden"
                     >
-                      <AccordionTrigger className="px-6 py-4 text-left hover:bg-slate-50 transition-colors">
+                      <AccordionTrigger
+                        className="px-6 py-4 text-left hover:bg-slate-50 transition-colors"
+                        onClick={() => GAEvents.faqExpand(faq.question)}
+                      >
                         <span className="text-lg font-semibold text-slate-900 pr-4">{faq.question}</span>
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4 text-slate-700 leading-relaxed">
@@ -90,12 +94,14 @@ export default function FAQ() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
+                onClick={() => GAEvents.ctaClick('FAQ Contact CTA', '/contact')}
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg"
               >
                 Contact Us
               </Link>
               <Link
                 to="/gallery"
+                onClick={() => GAEvents.ctaClick('FAQ Gallery CTA', '/gallery')}
                 className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors border-2 border-white"
               >
                 View Available Kittens

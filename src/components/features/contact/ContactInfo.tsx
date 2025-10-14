@@ -6,6 +6,7 @@
 import { Card } from '@/components/ui/card';
 import { Mail, MapPin } from 'lucide-react';
 import { CONTACT_INFO, PAGE_CONTENT } from '@/config/constants';
+import { GAEvents } from '@/config/analytics';
 
 export const ContactInfo: React.FC = () => {
   return (
@@ -19,7 +20,13 @@ export const ContactInfo: React.FC = () => {
           </div>
           <div>
             <h3 className="font-semibold mb-1">Email</h3>
-            <p className="text-sm text-muted-foreground">{CONTACT_INFO.email}</p>
+            <a
+              href={`mailto:${CONTACT_INFO.email}`}
+              onClick={() => GAEvents.emailClick(CONTACT_INFO.email)}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              {CONTACT_INFO.email}
+            </a>
           </div>
         </div>
 

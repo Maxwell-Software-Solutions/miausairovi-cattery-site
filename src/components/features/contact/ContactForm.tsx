@@ -15,6 +15,7 @@ import { ContactFormData } from '@/types/form.types';
 import { EmailService } from '@/services/email.service';
 import { FORM_CONFIG, PAGE_CONTENT } from '@/config/constants';
 import { callScheduleOptions } from '@/data/content.data';
+import { GAEvents } from '@/config/analytics';
 
 export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -56,6 +57,9 @@ export const ContactForm: React.FC = () => {
       const result = await EmailService.sendContactEmail(formData);
 
       if (result.success) {
+        // Track successful form submission
+        GAEvents.contactFormSubmit();
+
         toast({
           title: 'Message Sent!',
           description: "Thank you for your inquiry. We'll get back to you soon.",
@@ -74,6 +78,10 @@ export const ContactForm: React.FC = () => {
       }
     } catch (error) {
       console.error('Form submission error:', error);
+
+      // Track form error
+      GAEvents.contactFormError(error instanceof Error ? error.message : 'Unknown error');
+
       toast({
         title: 'Error',
         description: 'Failed to send message. Please try again.',

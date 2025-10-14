@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { Reviews } from '@/components/features/reviews/Reviews';
 import { featuresData } from '@/data/content.data';
 import { PAGE_CONTENT } from '@/config/constants';
+import { GAEvents } from '@/config/analytics';
 
 const Home = () => {
   return (
@@ -34,12 +35,12 @@ const Home = () => {
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">{PAGE_CONTENT.home.hero.title}</h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">{PAGE_CONTENT.home.hero.subtitle}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/cats">
+                <Link to="/cats" onClick={() => GAEvents.ctaClick('Hero - Meet Our Cats', '/cats')}>
                   <Button size="lg" className="w-full sm:w-auto">
                     Meet Our Cats
                   </Button>
                 </Link>
-                <Link to="/contact">
+                <Link to="/contact" onClick={() => GAEvents.ctaClick('Hero - Get in Touch', '/contact')}>
                   <Button size="lg" variant="outline" className="w-full sm:w-auto">
                     Get in Touch
                   </Button>
