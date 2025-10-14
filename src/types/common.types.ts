@@ -58,7 +58,7 @@ export interface NavLink {
  * Contact information structure
  */
 export interface ContactInfo {
-  email: string;
+  email?: string;
   location: string;
   locationDetails?: string;
   officeHours: {

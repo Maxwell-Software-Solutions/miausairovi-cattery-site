@@ -16,13 +16,13 @@ const Gallery = () => {
     <>
       <SEO
         title="Available Kittens - British Shorthair Kittens for Sale"
-        description="View adorable British Shorthair kittens available for adoption in Peterborough. All kittens are health checked, vaccinated, GCCF registered, and raised in a loving home environment. Ready to join your family."
+        description="View adorable British Shorthair kittens available for adoption. All kittens are health checked, vaccinated, GCCF registered, and raised in a loving home environment. Worldwide shipping available."
         keywords={[
           'British Shorthair kittens for sale',
-          'kittens available UK',
+          'kittens available',
           'buy British Shorthair kitten',
-          'British Shorthair kittens Peterborough',
-          'pedigree kittens for sale UK',
+          'British Shorthair kittens',
+          'pedigree kittens for sale',
           'GCCF registered kittens',
         ]}
         canonicalUrl="https://miausairovi.com/gallery"

@@ -22,7 +22,7 @@ export const faqData: FAQ[] = [
     id: 2,
     question: 'Where is Miausairovi Cattery located?',
     answer:
-      'We are based in Peterborough, Cambridgeshire, UK. We welcome visitors by appointment to meet our cats and kittens. We serve clients throughout the UK and can arrange safe transport if needed.',
+      'We are based in Peterborough, UK. We welcome visitors by appointment to meet our cats and kittens. We offer worldwide shipping with professional pet transport services and can arrange safe delivery to your location.',
     category: 'general',
   },
   {
@@ -76,9 +76,9 @@ export const faqData: FAQ[] = [
   },
   {
     id: 10,
-    question: 'Do you ship kittens?',
+    question: 'Do you ship kittens internationally?',
     answer:
-      'We prefer kittens to be collected in person so new owners can meet the parents and see where the kitten was raised. However, we can arrange safe, professional pet transport within the UK for an additional fee if you cannot collect in person.',
+      "Yes! We offer worldwide shipping with IATA-compliant professional pet transport. We handle all export documentation, health certificates, and coordinate door-to-door delivery. International clients can also visit our cattery in Peterborough, or we provide regular video calls to see your kitten's development.",
     category: 'adoption',
   },
   {

@@ -21,7 +21,6 @@ export const LocalBusinessSchema = () => {
     url: 'https://miausairovi.com',
     logo: 'https://miausairovi.com/assets/logo.png',
     image: 'https://miausairovi.com/assets/logo.png',
-    email: CONTACT_INFO.email,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Peterborough',
@@ -48,20 +47,10 @@ export const LocalBusinessSchema = () => {
       },
     ],
     priceRange: '££',
-    areaServed: [
-      {
-        '@type': 'City',
-        name: 'Peterborough',
-      },
-      {
-        '@type': 'City',
-        name: 'Cambridge',
-      },
-      {
-        '@type': 'City',
-        name: 'Huntingdon',
-      },
-    ],
+    areaServed: {
+      '@type': 'Place',
+      name: 'Worldwide',
+    },
     sameAs: ['https://facebook.com/miausairovi', 'https://instagram.com/miausairovi'],
   };
 

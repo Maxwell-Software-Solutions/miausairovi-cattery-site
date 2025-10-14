@@ -15,11 +15,11 @@ const Cats = () => {
     <>
       <SEO
         title="Our Breeding Cats - British Shorthair Champions"
-        description="Meet our exceptional British Shorthair breeding cats in Peterborough. Award-winning champions with outstanding pedigrees, health tested for HCM and PKD. All GCCF registered with excellent temperament."
+        description="Meet our exceptional British Shorthair breeding cats. Award-winning champions with outstanding pedigrees, health tested for HCM and PKD. All GCCF registered with excellent temperament. Worldwide delivery available."
         keywords={[
           'British Shorthair breeding cats',
           'champion British Shorthair',
-          'pedigree breeding cats UK',
+          'pedigree breeding cats',
           'British Shorthair queens and studs',
           'GCCF registered cats',
           'health tested breeding cats',

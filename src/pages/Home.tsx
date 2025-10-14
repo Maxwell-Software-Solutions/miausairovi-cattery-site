@@ -14,14 +14,14 @@ const Home = () => {
     <>
       <SEO
         title="Home - British Shorthair Breeder"
-        description="Welcome to Miausairovi Cattery - Professional British Shorthair breeding in Peterborough, UK. Registered breeder offering healthy, pedigree kittens with excellent temperament. GCCF registered cats."
+        description="Welcome to Miausairovi Cattery - Professional British Shorthair breeder based in Peterborough, UK with worldwide shipping. Registered breeder offering healthy, pedigree kittens with excellent temperament. GCCF registered cats."
         keywords={[
-          'British Shorthair breeder Peterborough',
-          'cat breeder Peterborough',
-          'British Shorthair cattery UK',
+          'British Shorthair breeder',
+          'British Shorthair cattery',
           'registered cat breeder',
-          'pedigree kittens UK',
+          'pedigree kittens',
           'GCCF registered breeder',
+          'British Shorthair worldwide',
         ]}
       />
       <LocalBusinessSchema />
@@ -71,48 +71,49 @@ const Home = () => {
         <section className="py-20 px-4 bg-white">
           <div className="container mx-auto max-w-5xl">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-                Serving Peterborough & Surrounding Areas
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Worldwide Delivery & Support</h2>
               <p className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
-                Based in Peterborough, Cambridgeshire, we welcome families from across the East of England and
-                throughout the UK to visit our cattery and meet our beautiful British Shorthair cats and kittens.
+                Based in Peterborough, UK, we welcome families from around the world to experience our exceptional
+                British Shorthair cats. We arrange safe, professional international shipping to bring your new companion
+                home.
               </p>
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <AnimatedSection delay={1}>
                 <div className="bg-gradient-to-br from-secondary to-secondary/50 rounded-xl p-8 shadow-soft border border-border">
-                  <h3 className="text-2xl font-bold mb-4 text-foreground">Local Areas We Serve</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-foreground">Global Shipping</h3>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start">
-                      <span className="text-primary mr-2">✓</span>
+                      <span className="text-primary mr-2">🌍</span>
                       <span>
-                        <strong className="text-foreground">Peterborough</strong> - Our home base
+                        <strong className="text-foreground">Worldwide Delivery:</strong> Safe shipping to your country
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary mr-2">✓</span>
+                      <span className="text-primary mr-2">✈️</span>
                       <span>
-                        <strong className="text-foreground">Cambridge</strong> - 40 minutes south
+                        <strong className="text-foreground">Professional Transport:</strong> IATA-compliant pet travel
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary mr-2">✓</span>
+                      <span className="text-primary mr-2">📋</span>
                       <span>
-                        <strong className="text-foreground">Huntingdon</strong> - Easy access
+                        <strong className="text-foreground">Documentation:</strong> All export papers and health
+                        certificates
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary mr-2">✓</span>
+                      <span className="text-primary mr-2">🏥</span>
                       <span>
-                        <strong className="text-foreground">Stamford</strong> - Quick journey
+                        <strong className="text-foreground">Pre-Flight Care:</strong> Full vet check and travel
+                        preparation
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary mr-2">✓</span>
+                      <span className="text-primary mr-2">💼</span>
                       <span>
-                        <strong className="text-foreground">Corby, Kettering, Spalding</strong> - Welcome visitors
+                        <strong className="text-foreground">Door-to-Door:</strong> Coordinated delivery to your home
                       </span>
                     </li>
                   </ul>
@@ -121,20 +122,19 @@ const Home = () => {
 
               <AnimatedSection delay={2}>
                 <div className="bg-gradient-to-br from-accent/20 to-accent/10 rounded-xl p-8 shadow-soft border border-border">
-                  <h3 className="text-2xl font-bold mb-4 text-foreground">Why Visit Us?</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-foreground">Why Choose Us?</h3>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">🏡</span>
                       <span>
-                        <strong className="text-foreground">Home Environment:</strong> See our cats living as family
-                        members
+                        <strong className="text-foreground">Home Environment:</strong> Cats raised as family members
                       </span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">👨‍👩‍👧</span>
                       <span>
-                        <strong className="text-foreground">Meet the Parents:</strong> View pedigree certificates and
-                        health records
+                        <strong className="text-foreground">Champion Bloodlines:</strong> GCCF registered with excellent
+                        pedigrees
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -145,17 +145,15 @@ const Home = () => {
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-accent mr-2">📋</span>
+                      <span className="text-accent mr-2">🌟</span>
                       <span>
-                        <strong className="text-foreground">Full Documentation:</strong> GCCF registration, health
-                        guarantees
+                        <strong className="text-foreground">Health Guarantee:</strong> HCM & PKD tested parents
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-accent mr-2">🚗</span>
+                      <span className="text-accent mr-2">🤝</span>
                       <span>
-                        <strong className="text-foreground">Transport Available:</strong> Safe delivery throughout the
-                        UK
+                        <strong className="text-foreground">Lifetime Support:</strong> We're here for you and your cat
                       </span>
                     </li>
                   </ul>
@@ -166,9 +164,9 @@ const Home = () => {
             <AnimatedSection delay={3}>
               <div className="mt-8 text-center bg-muted rounded-xl p-6 border border-border">
                 <p className="text-muted-foreground">
-                  <strong className="text-foreground">Traveling from further away?</strong> We can arrange safe,
-                  professional pet transport to London, Birmingham, Manchester, Leeds, and throughout England, Scotland,
-                  and Wales. All our kittens are raised in Peterborough with love and care.
+                  <strong className="text-foreground">Located in Peterborough, UK.</strong> We welcome visitors by
+                  appointment to meet our cats and kittens in person. Can't visit? We provide regular video calls and
+                  updates throughout your kitten's development.
                 </p>
               </div>
             </AnimatedSection>

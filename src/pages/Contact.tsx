@@ -17,13 +17,13 @@ const Contact = () => {
     <>
       <SEO
         title="Contact Us - British Shorthair Kitten Inquiries"
-        description="Contact Miausairovi Cattery in Peterborough for inquiries about British Shorthair kittens. We're happy to answer questions about availability, pricing, visiting our cattery, and our breeding program. Located in Peterborough, UK."
+        description="Contact Miausairovi Cattery for inquiries about British Shorthair kittens. We're happy to answer questions about availability, pricing, visiting our cattery, and our breeding program. Worldwide shipping available."
         keywords={[
           'contact cat breeder',
           'British Shorthair inquiry',
-          'kitten adoption inquiry Peterborough',
+          'kitten adoption inquiry',
           'cat breeder contact',
-          'visit cattery Peterborough',
+          'visit cattery',
         ]}
         canonicalUrl="https://miausairovi.com/contact"
       />

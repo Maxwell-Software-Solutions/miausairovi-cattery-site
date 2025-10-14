@@ -17,9 +17,8 @@ export const APP_CONFIG = {
  * Contact information
  */
 export const CONTACT_INFO: ContactInfo = {
-  email: 'vita.brasiunaite@gmail.com',
   location: 'Peterborough, UK',
-  locationDetails: 'Available by appointment',
+  locationDetails: 'Worldwide shipping available',
   officeHours: {
     weekday: 'Monday - Friday: 9am - 6pm',
     saturday: 'Saturday: 10am - 4pm',
