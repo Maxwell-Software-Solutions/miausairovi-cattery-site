@@ -29,19 +29,19 @@ const Home = () => {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 bg-gradient-hero">
+        <section className="pt-40 pb-32 px-4 bg-gradient-hero">
           <AnimatedSection>
-            <div className="container mx-auto text-center max-w-4xl">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">{PAGE_CONTENT.home.hero.title}</h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">{PAGE_CONTENT.home.hero.subtitle}</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="container mx-auto text-center max-w-3xl">
+              <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground leading-tight">{PAGE_CONTENT.home.hero.title}</h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">{PAGE_CONTENT.home.hero.subtitle}</p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link to="/cats" onClick={() => GAEvents.ctaClick('Hero - Meet Our Cats', '/cats')}>
-                  <Button size="lg" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full sm:w-auto px-8">
                     Meet Our Cats
                   </Button>
                 </Link>
                 <Link to="/contact" onClick={() => GAEvents.ctaClick('Hero - Get in Touch', '/contact')}>
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto px-8">
                     Get in Touch
                   </Button>
                 </Link>
@@ -51,12 +51,12 @@ const Home = () => {
         </section>
 
         {/* Detailed About Section */}
-        <section className="py-20 px-4 bg-secondary/30">
+        <section className="py-32 px-4 bg-secondary/30">
           <div className="container mx-auto">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{PAGE_CONTENT.home.commitment.title}</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">{PAGE_CONTENT.home.commitment.title}</h2>
             </AnimatedSection>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
               {featuresData.map((feature) => (
                 <FeatureCard key={feature.id} feature={feature} />
               ))}
@@ -68,20 +68,20 @@ const Home = () => {
         <Reviews />
 
         {/* Location & Service Areas Section */}
-        <section className="py-20 px-4 bg-white">
-          <div className="container mx-auto max-w-5xl">
+        <section className="py-32 px-4 bg-white">
+          <div className="container mx-auto max-w-6xl">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Worldwide Delivery & Support</h2>
-              <p className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-bold text-center mb-8">Worldwide Delivery & Support</h2>
+              <p className="text-lg text-muted-foreground text-center mb-16 max-w-3xl mx-auto leading-relaxed">
                 Based in Peterborough, UK, we welcome families from around the world to experience our exceptional
                 British Shorthair cats. We arrange safe, professional international shipping to bring your new companion
                 home.
               </p>
             </AnimatedSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <AnimatedSection delay={1}>
-                <div className="bg-gradient-to-br from-secondary to-secondary/50 rounded-xl p-8 shadow-soft border border-border">
+                <div className="bg-gradient-to-br from-secondary to-secondary/50 rounded-xl p-10 shadow-soft border border-border">
                   <h3 className="text-2xl font-bold mb-4 text-foreground">Global Shipping</h3>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start">
@@ -121,7 +121,7 @@ const Home = () => {
               </AnimatedSection>
 
               <AnimatedSection delay={2}>
-                <div className="bg-gradient-to-br from-accent/20 to-accent/10 rounded-xl p-8 shadow-soft border border-border">
+                <div className="bg-gradient-to-br from-accent/20 to-accent/10 rounded-xl p-10 shadow-soft border border-border">
                   <h3 className="text-2xl font-bold mb-4 text-foreground">Why Choose Us?</h3>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start">
@@ -162,8 +162,8 @@ const Home = () => {
             </div>
 
             <AnimatedSection delay={3}>
-              <div className="mt-8 text-center bg-muted rounded-xl p-6 border border-border">
-                <p className="text-muted-foreground">
+              <div className="mt-12 text-center bg-muted rounded-xl p-8 border border-border">
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   <strong className="text-foreground">Located in Peterborough, UK.</strong> We welcome visitors by
                   appointment to meet our cats and kittens in person. Can't visit? We provide regular video calls and
                   updates throughout your kitten's development.
@@ -174,11 +174,11 @@ const Home = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-secondary/30">
+        <section className="py-32 px-4 bg-secondary/30">
           <AnimatedSection>
             <div className="container mx-auto text-center max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">{PAGE_CONTENT.home.cta.title}</h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8">{PAGE_CONTENT.home.cta.title}</h2>
+              <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
                 {PAGE_CONTENT.home.cta.subtitle} Visit our{' '}
                 <Link to="/gallery" className="text-primary hover:underline font-semibold">
                   gallery
@@ -189,14 +189,14 @@ const Home = () => {
                 </Link>{' '}
                 for more information.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link to="/gallery">
-                  <Button size="lg" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full sm:w-auto px-8">
                     View Kittens
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto px-8">
                     Contact Us
                   </Button>
                 </Link>

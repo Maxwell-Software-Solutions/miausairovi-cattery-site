@@ -19,7 +19,7 @@ export const KittenCard: React.FC<KittenCardProps> = ({ kitten, index }) => {
           <img
             src={kitten.image}
             alt={`${kitten.name}, ${kitten.age} ${
-              kitten.status === 'available' ? 'available' : ''
+              kitten.status === KittenStatus.Available ? 'available' : ''
             } British Shorthair kitten at Miausairovi Cattery Peterborough UK`}
             loading={index < 4 ? 'eager' : 'lazy'}
             fetchPriority={index < 2 ? 'high' : 'low'}

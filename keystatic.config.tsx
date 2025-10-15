@@ -88,7 +88,7 @@ export default config({
           }),
           {
             label: 'Image Gallery',
-            itemLabel: (props) => `Image ${props.index + 1}`,
+            itemLabel: (props) => props.value?.filename || 'Gallery Image',
           }
         ),
         parentFather: fields.text({ label: 'Father' }),
