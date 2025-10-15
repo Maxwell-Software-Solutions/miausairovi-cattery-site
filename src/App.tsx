@@ -3,7 +3,7 @@ import { Toaster as Sonner } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, lazy } from 'react';
+import { useEffect } from 'react';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
@@ -15,9 +15,6 @@ import NotFound from './pages/NotFound';
 import { preloadImagesWithPriority } from './hooks/useImagePreload';
 import { HIGH_PRIORITY_IMAGES, LOW_PRIORITY_IMAGES } from './config/images';
 import { initializeGA, trackPageView } from './config/analytics';
-
-// Lazy load Keystatic admin
-const KeystaticAdmin = lazy(() => import('./pages/KeystaticAdmin'));
 
 const queryClient = new QueryClient();
 
@@ -55,8 +52,6 @@ const App = () => {
         <BrowserRouter>
           <AnalyticsTracker />
           <Routes>
-            {/* Keystatic admin route */}
-            <Route path="/keystatic/*" element={<KeystaticAdmin />} />
             <Route
               path="/"
               element={

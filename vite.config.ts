@@ -28,12 +28,9 @@ export default defineConfig(({ mode }) => ({
             '@radix-ui/react-toast',
             '@radix-ui/react-tooltip',
           ],
-          keystatic: ['@keystatic/core', '@keystatic/astro'],
         },
       },
     },
-    // Increase chunk size warning limit for Keystatic
-    chunkSizeWarningLimit: 1000,
     // Enable minification
     minify: 'terser',
     terserOptions: {

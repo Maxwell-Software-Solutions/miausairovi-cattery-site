@@ -3,18 +3,8 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/api/keystatic/:path*",
-      "destination": "/api/keystatic/[...params]"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "functions": {
-    "api/keystatic/[...params].ts": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  }
+  ]
 }
