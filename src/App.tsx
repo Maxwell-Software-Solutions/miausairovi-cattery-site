@@ -55,6 +55,7 @@ const App = () => {
         <BrowserRouter>
           <AnalyticsTracker />
           <Routes>
+            {/* Keystatic admin route */}
             <Route path="/keystatic/*" element={<KeystaticAdmin />} />
             <Route
               path="/"
