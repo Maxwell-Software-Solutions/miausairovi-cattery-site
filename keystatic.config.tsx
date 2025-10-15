@@ -2,11 +2,7 @@ import { config, fields, collection, singleton } from '@keystatic/core';
 
 export default config({
   storage: {
-    kind: 'github',
-    repo: 'Maxwell-Software-Solutions/miausairovi-cattery-site',
-  },
-  cloud: {
-    project: 'miausairovi-cattery',
+    kind: 'local',
   },
   collections: {
     cats: collection({
