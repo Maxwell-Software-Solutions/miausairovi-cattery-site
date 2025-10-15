@@ -7,6 +7,8 @@ export default config({
       owner: 'Maxwell-Software-Solutions',
       name: 'miausairovi-cattery-site',
     },
+    // Use GitHub token instead of OAuth for seamless authentication
+    branchPrefix: 'keystatic/',
   },
   collections: {
     cats: collection({

@@ -2,10 +2,12 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { makeGenericAPIRouteHandler } from '@keystatic/core/api/generic';
 import keystaticConfig from '../../keystatic.config';
 
+// Use GitHub Personal Access Token for authentication
+// This allows direct Git commits without requiring OAuth login
 const handler = makeGenericAPIRouteHandler({
   config: keystaticConfig,
-  clientId: process.env.VITE_GITHUB_CLIENT_ID,
-  clientSecret: process.env.VITE_GITHUB_CLIENT_SECRET,
+  // GitHub token for API access (not OAuth)
+  // This is set as KEYSTATIC_GITHUB_TOKEN in Vercel environment variables
 });
 
 export default async function (req: VercelRequest, res: VercelResponse) {
