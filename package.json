@@ -4,10 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "keystatic": "keystatic dev",
-  "prebuild": "tsx scripts/generate-static-data.ts",
-  "build": "vite build",
+    "dev": "vite",
+    "prebuild": "tsx scripts/generate-static-data.ts",
+    "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -15,8 +14,7 @@
     "lighthouse:ci": "lighthouse http://localhost:4173 --output html --output json --output-path ./lighthouse-report --quiet --chrome-flags=\"--headless\""
   },
   "dependencies": {
-  "@hookform/resolvers": "^3.10.0",
-  "@keystatic/core": "^0.5.48",
+    "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
     "@radix-ui/react-aspect-ratio": "^1.1.7",
