@@ -3,7 +3,7 @@ import { Toaster as Sonner } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
@@ -15,6 +15,8 @@ import NotFound from './pages/NotFound';
 import { preloadImagesWithPriority } from './hooks/useImagePreload';
 import { HIGH_PRIORITY_IMAGES, LOW_PRIORITY_IMAGES } from './config/images';
 import { initializeGA, trackPageView } from './config/analytics';
+
+const Admin = lazy(() => import('./pages/Admin'));
 
 const queryClient = new QueryClient();
 
@@ -52,6 +54,18 @@ const App = () => {
         <BrowserRouter>
           <AnalyticsTracker />
           <Routes>
+            <Route
+              path="/admin/*"
+              element={
+                <Suspense
+                  fallback={
+                    <div style={{ padding: '2rem', textAlign: 'center' }}>Loading content management system...</div>
+                  }
+                >
+                  <Admin />
+                </Suspense>
+              }
+            />
             <Route
               path="/"
               element={
