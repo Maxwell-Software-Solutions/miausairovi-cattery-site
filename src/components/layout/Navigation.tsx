@@ -56,7 +56,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pt-8 pb-6 flex flex-col items-center gap-6">
+          <div className="md:hidden pt-8 pb-6 flex flex-col items-center gap-6 relative z-50">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
