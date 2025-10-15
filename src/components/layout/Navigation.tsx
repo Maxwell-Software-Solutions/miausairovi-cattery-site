@@ -46,14 +46,6 @@ const Navigation = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation Backdrop */}
-        {isOpen && (
-          <div 
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden" 
-            onClick={() => setIsOpen(false)}
-          />
-        )}
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pt-8 pb-6 flex flex-col items-center gap-6 relative z-50">
