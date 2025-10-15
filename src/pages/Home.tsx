@@ -14,13 +14,13 @@ const Home = () => {
     <>
       <SEO
         title="Home - British Shorthair Breeder"
-        description="Welcome to Miausairovi Cattery - Professional British Shorthair breeder based in Peterborough, UK with worldwide shipping. Registered breeder offering healthy, pedigree kittens with excellent temperament. GCCF registered cats."
+        description="Welcome to Miausairovi Cattery - Professional British Shorthair breeder based in Peterborough, UK with worldwide shipping. Registered breeder offering healthy, pedigree kittens with excellent temperament. GCCF & TICA registered cats."
         keywords={[
           'British Shorthair breeder',
           'British Shorthair cattery',
           'registered cat breeder',
           'pedigree kittens',
-          'GCCF registered breeder',
+          'GCCF TICA registered breeder',
           'British Shorthair worldwide',
         ]}
       />
@@ -32,8 +32,12 @@ const Home = () => {
         <section className="pt-40 pb-32 px-4 bg-gradient-hero">
           <AnimatedSection>
             <div className="container mx-auto text-center max-w-3xl">
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground leading-tight">{PAGE_CONTENT.home.hero.title}</h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">{PAGE_CONTENT.home.hero.subtitle}</p>
+              <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground leading-tight">
+                {PAGE_CONTENT.home.hero.title}
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
+                {PAGE_CONTENT.home.hero.subtitle}
+              </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link to="/cats" onClick={() => GAEvents.ctaClick('Hero - Meet Our Cats', '/cats')}>
                   <Button size="lg" className="w-full sm:w-auto px-8">
@@ -133,8 +137,8 @@ const Home = () => {
                     <li className="flex items-start">
                       <span className="text-accent mr-2">👨‍👩‍👧</span>
                       <span>
-                        <strong className="text-foreground">Champion Bloodlines:</strong> GCCF registered with excellent
-                        pedigrees
+                        <strong className="text-foreground">Champion Bloodlines:</strong> GCCF & TICA registered with
+                        excellent pedigrees
                       </span>
                     </li>
                     <li className="flex items-start">

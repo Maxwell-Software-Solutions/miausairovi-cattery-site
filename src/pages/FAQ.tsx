@@ -20,7 +20,7 @@ export default function FAQ() {
     <>
       <SEO
         title="FAQ - British Shorthair Questions | Miausairovi Cattery"
-        description="Frequently asked questions about British Shorthair kittens, breeding, adoption process, health testing, and care. Find answers about our GCCF registered cattery with worldwide shipping."
+        description="Frequently asked questions about British Shorthair kittens, breeding, adoption process, health testing, and care. Find answers about our GCCF & TICA registered cattery with worldwide shipping."
         keywords={[
           'British Shorthair FAQ',
           'kitten questions',
@@ -28,7 +28,7 @@ export default function FAQ() {
           'cat breeder FAQ',
           'kitten adoption questions',
           'British Shorthair health questions',
-          'GCCF registration questions',
+          'GCCF TICA registration questions',
           'kitten care guide',
         ]}
         canonicalUrl="https://miausairovi.com/faq"

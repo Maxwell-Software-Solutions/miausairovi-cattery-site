@@ -1,7 +1,7 @@
 ---
-question: Are your cats GCCF registered?
+question: Are your cats GCCF and TICA registered?
 category: general
 order: 6
 ---
 
-Yes, all our breeding cats are registered with the Governing Council of the Cat Fancy (GCCF), the UK premier cat registry. All kittens are also registered and come with GCCF pedigree certificates showing their lineage.
+Yes, all our breeding cats are registered with both the Governing Council of the Cat Fancy (GCCF), the UK's premier cat registry, and The International Cat Association (TICA), one of the world's largest genetic cat registries. All kittens are registered with both organizations and come with GCCF and TICA pedigree certificates showing their prestigious lineage.

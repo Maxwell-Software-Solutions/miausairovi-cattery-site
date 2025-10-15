@@ -15,7 +15,7 @@ export const faqData: FAQ[] = [
     id: 1,
     question: 'How much does a British Shorthair kitten cost?',
     answer:
-      'Our British Shorthair kittens are priced between £800-£1,500 depending on color, pedigree, and show quality. The price includes first vaccinations, health check, microchip, GCCF registration, and a kitten starter pack with food and toys.',
+      'Our British Shorthair kittens are priced between £800-£1,500 depending on color, pedigree, and show quality. The price includes first vaccinations, health check, microchip, GCCF & TICA registration, and a kitten starter pack with food and toys.',
     category: 'adoption',
   },
   {
@@ -48,9 +48,9 @@ export const faqData: FAQ[] = [
   },
   {
     id: 6,
-    question: 'Are your cats GCCF registered?',
+    question: 'Are your cats GCCF and TICA registered?',
     answer:
-      'Yes, all our breeding cats are registered with the Governing Council of the Cat Fancy (GCCF), the UK premier cat registry. All kittens are also registered and come with GCCF pedigree certificates showing their lineage.',
+      "Yes, all our breeding cats are registered with both the Governing Council of the Cat Fancy (GCCF), the UK's premier cat registry, and The International Cat Association (TICA), one of the world's largest genetic cat registries. All kittens are registered with both organizations and come with GCCF and TICA pedigree certificates showing their prestigious lineage.",
     category: 'general',
   },
   {
@@ -92,7 +92,7 @@ export const faqData: FAQ[] = [
     id: 12,
     question: 'What is included when I purchase a kitten?',
     answer:
-      "Your kitten comes with: GCCF registration certificate, 5-generation pedigree, vaccination record, microchip, health check certificate, food sample, toy with familiar scent, care guide, and lifetime breeder support. We're always here to answer questions!",
+      "Your kitten comes with: GCCF & TICA registration certificates, 5-generation pedigree, vaccination record, microchip, health check certificate, food sample, toy with familiar scent, care guide, and lifetime breeder support. We're always here to answer questions!",
     category: 'adoption',
   },
   {
