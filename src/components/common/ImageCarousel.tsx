@@ -68,6 +68,8 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
           loading={priority && idx === 0 ? 'eager' : 'lazy'}
           fetchPriority={priority && idx === 0 ? 'high' : 'low'}
           decoding="async"
+          width="800"
+          height="800"
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
             idx === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}

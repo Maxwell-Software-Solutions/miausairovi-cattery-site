@@ -24,6 +24,8 @@ export const KittenCard: React.FC<KittenCardProps> = ({ kitten, index }) => {
             loading={index < 4 ? 'eager' : 'lazy'}
             fetchPriority={index < 2 ? 'high' : 'low'}
             decoding="async"
+            width="400"
+            height="400"
             className="w-full h-full object-cover"
           />
         </div>
