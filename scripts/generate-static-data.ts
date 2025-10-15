@@ -61,7 +61,7 @@ interface SiteSettings {
   socialMedia: { facebook?: string; instagram?: string; youtube?: string };
 }
 
-interface KeystaticData {
+interface StaticData {
   cats: Cat[];
   kittens: Kitten[];
   reviews: Review[];
@@ -127,7 +127,7 @@ function readYAMLSingleton<T>(singletonName: string): T | null {
 }
 
 async function generateStaticData() {
-  console.log('Generating static data from Keystatic content...');
+  console.log('Generating static data from content...');
 
   const cats = readMarkdownCollection<Cat>('cats');
   const kittens = readMarkdownCollection<Kitten>('kittens');
@@ -153,7 +153,7 @@ async function generateStaticData() {
   reviews.sort((a, b) => a.order - b.order);
   faqs.sort((a, b) => a.order - b.order);
 
-  const data: KeystaticData = {
+  const data: StaticData = {
     cats,
     kittens,
     reviews,
@@ -167,7 +167,7 @@ async function generateStaticData() {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  const outputPath = path.join(outputDir, 'keystatic-data.json');
+  const outputPath = path.join(outputDir, 'static-data.json');
   fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
 
   console.log(

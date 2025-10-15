@@ -18,7 +18,6 @@ All project documentation is organized in the [`/docs`](./docs) folder:
 
 - **`/docs/seo`** - SEO implementation guides and testing checklists
 - **`/docs/analytics`** - Google Analytics setup and event tracking
-- **`/docs/cms`** - Keystatic CMS migration and usage guides
 - **`/docs/setup`** - Project setup, deployment, and email configuration
 - **`/docs/project`** - Project planning, refactoring, and improvements
 
@@ -26,13 +25,7 @@ All project documentation is organized in the [`/docs`](./docs) folder:
 
 ### Content Management
 
-Want to enable non-technical content editing? See the complete Keystatic CMS integration guide:
-
-- **Decision Guide**: [docs/cms/KEYSTATIC_DECISION_GUIDE.md](./docs/cms/KEYSTATIC_DECISION_GUIDE.md) - Should you migrate?
-- **Migration Plan**: [docs/cms/KEYSTATIC_MIGRATION_PLAN.md](./docs/cms/KEYSTATIC_MIGRATION_PLAN.md) - Step-by-step implementation (18-24 hours)
-- **Quick Start**: [docs/cms/KEYSTATIC_QUICK_START.md](./docs/cms/KEYSTATIC_QUICK_START.md) - Daily usage guide
-
-**What you get**: Visual admin interface for managing cats, kittens, reviews, and FAQs without coding.
+Content is managed through markdown files in the `content/` directory. Edit files directly or through any text editor to update the site content.
 
 ---
 

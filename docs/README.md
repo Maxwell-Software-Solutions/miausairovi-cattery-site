@@ -29,18 +29,6 @@ Google Analytics 4 setup, configuration, and event tracking guides.
 
 ---
 
-### `/cms` - Content Management System Documentation
-Keystatic CMS migration and usage guides for self-service content management.
-
-- **README.md** - CMS documentation overview and comparison
-- **KEYSTATIC_MIGRATION_PLAN.md** - Complete 9-phase implementation plan (18-24 hours)
-- **KEYSTATIC_QUICK_START.md** - Daily usage guide and quick reference
-- **KEYSTATIC_DECISION_GUIDE.md** - Should you migrate? Decision framework and analysis
-
-**Start here**: `KEYSTATIC_DECISION_GUIDE.md` to determine if CMS is right for you
-
----
-
 ### `/setup` - Setup & Configuration
 Initial project setup, deployment, and third-party service configuration.
 
@@ -141,13 +129,6 @@ High-level project documentation, refactoring plans, and improvement suggestions
 
 #### Configure email?
 → Read `/setup/MAILERSEND_QUICKSTART.md`
-
-#### Add a CMS for content editing?
-→ Read `/cms/KEYSTATIC_DECISION_GUIDE.md` (start here to decide)
-→ Then `/cms/KEYSTATIC_MIGRATION_PLAN.md` (if migrating)
-
-#### Edit content without coding?
-→ After CMS setup: `/cms/KEYSTATIC_QUICK_START.md`
 
 #### Test if everything works?
 → Read `/seo/SEO_TESTING_CHECKLIST.md`

@@ -34,19 +34,13 @@ docs/
 │   ├── SETUP_INSTRUCTIONS.md
 │   └── YOUR_ACTION_CHECKLIST.md
 │
-├── cms/                               # CMS Documentation (4 files)
-│   ├── README.md
-│   ├── KEYSTATIC_MIGRATION_PLAN.md
-│   ├── KEYSTATIC_QUICK_START.md
-│   └── KEYSTATIC_DECISION_GUIDE.md
-│
 └── project/                           # Project Documentation (3 files)
     ├── IMPROVEMENT_SUGGESTIONS.md
     ├── REFACTORING_PLAN.md
     └── REFACTORING_SUMMARY.md
 ```
 
-**Total: 23 documentation files organized into 5 categories**
+**Total: 19 documentation files organized into 4 categories**
 
 ---
 
