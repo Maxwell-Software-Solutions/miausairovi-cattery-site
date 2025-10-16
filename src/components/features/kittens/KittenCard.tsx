@@ -1,6 +1,6 @@
 /**
  * KittenCard Component
- * Displays a kitten with image and availability status
+ * Displays a kitten with image and availability status with enhanced information
  */
 
 import { Card } from '@/components/ui/card';
@@ -18,9 +18,12 @@ export const KittenCard: React.FC<KittenCardProps> = ({ kitten, index }) => {
         <div className="aspect-square bg-secondary/20 flex items-center justify-center">
           <img
             src={kitten.image}
-            alt={`${kitten.name}, ${kitten.age} ${
-              kitten.status === KittenStatus.Available ? 'available' : ''
-            } British Shorthair kitten at Miausairovi Cattery Peterborough UK`}
+            alt={
+              kitten.altText ||
+              `${kitten.name}, ${kitten.sex || ''} ${kitten.breed || 'kitten'} ${
+                kitten.color || ''
+              } at Miausairovi Cattery Peterborough UK`
+            }
             loading={index < 4 ? 'eager' : 'lazy'}
             fetchPriority={index < 2 ? 'high' : 'low'}
             decoding="async"
@@ -31,7 +34,11 @@ export const KittenCard: React.FC<KittenCardProps> = ({ kitten, index }) => {
         </div>
         <div className="p-4">
           <h3 className="font-bold mb-1">{kitten.name}</h3>
+          {kitten.sex && <p className="text-xs text-muted-foreground capitalize">{kitten.sex}</p>}
+          {kitten.breed && <p className="text-xs text-muted-foreground">{kitten.breed}</p>}
+          {kitten.color && <p className="text-xs text-muted-foreground">{kitten.color}</p>}
           <p className="text-sm text-muted-foreground mb-2">Age: {kitten.age}</p>
+          {kitten.temperament && <p className="text-xs text-primary italic mb-2">{kitten.temperament}</p>}
           <StatusBadge status={kitten.status} />
         </div>
       </Card>

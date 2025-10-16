@@ -9,6 +9,7 @@ import { NavLink } from '@/types/common.types';
  */
 export const NAV_LINKS: NavLink[] = [
   { path: '/', label: 'Home' },
+  { path: '/about', label: 'About Us' },
   { path: '/cats', label: 'Our Cats' },
   { path: '/gallery', label: 'Kittens' },
   { path: '/faq', label: 'FAQ' },
@@ -19,6 +20,7 @@ export const NAV_LINKS: NavLink[] = [
  * Footer quick links (can be different from main nav if needed)
  */
 export const FOOTER_LINKS: NavLink[] = [
+  { path: '/about', label: 'About Us' },
   { path: '/cats', label: 'Our Cats' },
   { path: '/gallery', label: 'Kittens Gallery' },
   { path: '/faq', label: 'FAQ' },
