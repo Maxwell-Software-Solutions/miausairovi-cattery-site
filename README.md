@@ -1,6 +1,6 @@
-# Miausairovi Cattery - British Shorthair Breeder Website
+# Miausairovi Cattery - British Shorthair, British Longhair, Scottish Fold & Scottish Straight Breeder Website
 
-Professional website for Miausairovi Cattery, a GCCF registered British Shorthair breeder based in Peterborough, UK.
+Professional website for Miausairovi Cattery, a GCCF & TICA registered British Shorthair, British Longhair, Scottish Fold and Scottish Straight breeder based in Peterborough, UK.
 
 ## 🎯 Quick Links
 

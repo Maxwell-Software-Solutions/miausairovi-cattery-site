@@ -17,7 +17,8 @@ export const LocalBusinessSchema = () => {
     '@type': 'PetStore',
     '@id': 'https://miausairovi.com/#organization',
     name: APP_CONFIG.siteName,
-    description: APP_CONFIG.siteDescription,
+    description:
+      'GCCF & TICA Registered British Shorthair, British Longhair, Scottish Fold and Scottish Straight breeder based in Peterborough, UK. Ethical breeding practices, health-tested cats, and exceptional care for all our kittens.',
     url: 'https://miausairovi.com',
     logo: 'https://miausairovi.com/assets/logo.png',
     image: 'https://miausairovi.com/assets/logo.png',

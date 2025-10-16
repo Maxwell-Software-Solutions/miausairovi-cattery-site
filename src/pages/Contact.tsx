@@ -16,8 +16,8 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact Us - British Shorthair Kitten Inquiries"
-        description="Contact Miausairovi Cattery for inquiries about British Shorthair kittens. We're happy to answer questions about availability, pricing, visiting our cattery, and our breeding program. Worldwide shipping available."
+        title="Contact Us - British Shorthair, British Longhair, Scottish Fold & Scottish Straight Kitten Inquiries"
+        description="Contact Miausairovi Cattery for inquiries about British Shorthair, British Longhair, Scottish Fold and Scottish Straight kittens. We're happy to answer questions about availability, pricing, visiting our cattery, and our breeding program. Worldwide shipping available."
         keywords={[
           'contact cat breeder',
           'British Shorthair inquiry',

@@ -30,19 +30,26 @@ export const SEO: React.FC<SEOProps> = ({
 
   const fullTitle = title
     ? `${title} | ${APP_CONFIG.siteName}`
-    : `${APP_CONFIG.siteName} - British Shorthair Breeder in Peterborough, UK`;
+    : `${APP_CONFIG.siteName} - British Shorthair, British Longhair, Scottish Fold & Scottish Straight Breeder in Peterborough, UK`;
 
   const fullDescription =
     description ||
-    'Professional British Shorthair cat breeding in Peterborough, UK. Registered breeder offering healthy, pedigree kittens raised with love and care. View our beautiful cats and available kittens.';
+    'Professional British Shorthair, British Longhair, Scottish Fold and Scottish Straight cat breeding in Peterborough, UK. GCCF & TICA registered breeder offering healthy, pedigree kittens raised with love and care. View our beautiful cats and available kittens.';
 
   const defaultKeywords = [
     'British Shorthair breeder',
+    'British Longhair breeder',
+    'Scottish Fold breeder',
+    'Scottish Straight breeder',
     'cat breeder Peterborough',
     'British Shorthair kittens UK',
+    'British Longhair kittens UK',
+    'Scottish Fold kittens UK',
+    'Scottish Straight kittens UK',
     'pedigree kittens',
     'Miausairovi Cattery',
-    'British Shorthair cattery UK',
+    'GCCF registered breeder',
+    'TICA registered breeder',
   ];
 
   const allKeywords = [...new Set([...defaultKeywords, ...keywords])];

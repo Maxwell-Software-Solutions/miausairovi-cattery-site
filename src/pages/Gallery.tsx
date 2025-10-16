@@ -15,8 +15,8 @@ const Gallery = () => {
   return (
     <>
       <SEO
-        title="Available Kittens - British Shorthair Kittens for Sale"
-        description="View adorable British Shorthair kittens available for adoption. All kittens are health checked, vaccinated, GCCF & TICA registered, and raised in a loving home environment. Worldwide shipping available."
+        title="Available Kittens - British Shorthair, British Longhair, Scottish Fold & Scottish Straight Kittens for Sale"
+        description="View adorable British Shorthair, British Longhair, Scottish Fold and Scottish Straight kittens available for adoption. All kittens are health checked, vaccinated, GCCF & TICA registered, and raised in a loving home environment. Worldwide shipping available."
         keywords={[
           'British Shorthair kittens for sale',
           'kittens available',

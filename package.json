@@ -10,8 +10,8 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "lighthouse": "lighthouse http://localhost:4173 --output html --output json --output-path ./lighthouse-report --view",
-    "lighthouse:ci": "lighthouse http://localhost:4173 --output html --output json --output-path ./lighthouse-report --quiet --chrome-flags=\"--headless\""
+    "lighthouse": "lighthouse http://localhost:8080/ --output html --output json --output-path ./lighthouse-report --view",
+    "lighthouse:ci": "lighthouse http://localhost:8080/ --output html --output json --output-path ./lighthouse-report --quiet --chrome-flags=\"--headless\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

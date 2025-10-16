@@ -19,8 +19,8 @@ export default function FAQ() {
   return (
     <>
       <SEO
-        title="FAQ - British Shorthair Questions | Miausairovi Cattery"
-        description="Frequently asked questions about British Shorthair kittens, breeding, adoption process, health testing, and care. Find answers about our GCCF & TICA registered cattery with worldwide shipping."
+        title="FAQ - British Shorthair, British Longhair, Scottish Fold & Scottish Straight Questions | Miausairovi Cattery"
+        description="Frequently asked questions about British Shorthair, British Longhair, Scottish Fold and Scottish Straight kittens, breeding, adoption process, health testing, and care. Find answers about our GCCF & TICA registered cattery with worldwide shipping."
         keywords={[
           'British Shorthair FAQ',
           'kitten questions',
@@ -46,7 +46,7 @@ export default function FAQ() {
           {/* Header */}
           <PageHeader
             title="Frequently Asked Questions"
-            subtitle="Find answers to common questions about British Shorthair kittens, our breeding program, adoption process, and caring for your new companion."
+            subtitle="Find answers to common questions about British Shorthair, British Longhair, Scottish Fold, and Scottish Straight kittens, our breeding program, adoption process, and caring for your new companion."
           />
 
           {/* FAQ Categories */}

@@ -13,15 +13,20 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Home - British Shorthair Breeder"
-        description="Welcome to Miausairovi Cattery - Professional British Shorthair breeder based in Peterborough, UK with worldwide shipping. Registered breeder offering healthy, pedigree kittens with excellent temperament. GCCF & TICA registered cats."
+        title="Home - British Shorthair, British Longhair, Scottish Fold & Scottish Straight Breeder"
+        description="Welcome to Miausairovi Cattery - Professional British Shorthair, British Longhair, Scottish Fold and Scottish Straight breeder based in Peterborough, UK with worldwide shipping. GCCF & TICA registered breeder offering healthy, pedigree kittens with excellent temperament and health guarantees."
         keywords={[
-          'British Shorthair breeder',
+          'British Shorthair breeder UK',
+          'British Longhair breeder UK',
+          'Scottish Fold breeder UK',
+          'Scottish Straight breeder UK',
           'British Shorthair cattery',
+          'Scottish Fold cattery',
           'registered cat breeder',
           'pedigree kittens',
           'GCCF TICA registered breeder',
-          'British Shorthair worldwide',
+          'British Shorthair kittens worldwide',
+          'Scottish Fold kittens worldwide',
         ]}
       />
       <LocalBusinessSchema />

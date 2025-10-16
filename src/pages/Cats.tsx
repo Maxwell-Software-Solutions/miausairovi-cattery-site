@@ -84,8 +84,8 @@ const Cats = () => {
   return (
     <>
       <SEO
-        title="Our Breeding Cats - British Shorthair Champions"
-        description="Meet our exceptional British Shorthair breeding cats. Award-winning champions with outstanding pedigrees, health tested for HCM and PKD. All GCCF & TICA registered with excellent temperament. Worldwide delivery available."
+        title="Our Breeding Cats - British Shorthair, British Longhair, Scottish Fold & Scottish Straight Champions"
+        description="Meet our exceptional British Shorthair, British Longhair, Scottish Fold and Scottish Straight breeding cats. Award-winning champions with outstanding pedigrees, health tested for HCM and PKD. All GCCF & TICA registered with excellent temperament. Worldwide delivery available."
         keywords={[
           'British Shorthair breeding cats',
           'champion British Shorthair',
