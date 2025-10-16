@@ -41,14 +41,22 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+          >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pt-8 pb-6 flex flex-col items-center gap-6 relative z-50">
+          <div id="mobile-menu" className="md:hidden pt-8 pb-6 flex flex-col items-center gap-6 relative z-50">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
