@@ -63,7 +63,7 @@ export default defineConfig(({ mode }) => ({
     // Generate source maps for production debugging (disable for max performance)
     sourcemap: false,
     // Target modern browsers for smaller bundles
-    target: 'esnext',
+    target: 'es2020',
   },
   // Optimize dependencies
   optimizeDeps: {

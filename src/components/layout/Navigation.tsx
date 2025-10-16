@@ -1,16 +1,17 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, memo, useCallback } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/logo.png';
 import { NAV_LINKS } from '@/config/navigation';
 import { APP_CONFIG } from '@/config/constants';
 
-const Navigation = () => {
+const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = useCallback((path: string) => location.pathname === path, [location.pathname]);
+  const toggleMenu = useCallback(() => setIsOpen((prev) => !prev), []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -21,6 +22,9 @@ const Navigation = () => {
               src={logo}
               alt="Miausairovi Cattery - British Shorthair Breeder Peterborough UK"
               className="h-12 md:h-14"
+              width="56"
+              height="56"
+              loading="eager"
             />
             <span className="text-2xl font-bold text-primary">{APP_CONFIG.siteName}</span>
           </Link>
@@ -45,7 +49,7 @@ const Navigation = () => {
             variant="ghost"
             size="icon"
             className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleMenu}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -74,6 +78,8 @@ const Navigation = () => {
       </div>
     </nav>
   );
-};
+});
+
+Navigation.displayName = 'Navigation';
 
 export default Navigation;

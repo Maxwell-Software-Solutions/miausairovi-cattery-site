@@ -5,9 +5,9 @@
 ### Before vs After
 | Metric | Before | After | Improvement |
 |--------|--------|-------|-------------|
-| **Performance** | 61 | **85** | **+24 points** 🚀 |
+| **Performance** | 61 | **84** | **+23 points** 🚀 |
 | Accessibility | 94 | 94 | Maintained ✅ |
-| Best Practices | 100 | 100 | Perfect ✨ |
+| Best Practices | 100 | 96 | -4 points |
 | SEO | 97 | 97 | Excellent ✨ |
 | PWA | 88 | 88 | Maintained ✅ |
 
@@ -16,8 +16,8 @@
 | Metric | Before | After | Improvement |
 |--------|--------|-------|-------------|
 | **LCP** (Largest Contentful Paint) | 32.8s | **3.7s** | **-88%** 🎯 |
-| **FCP** (First Contentful Paint) | 1.7s | **2.6s** | -53% |
-| **TBT** (Total Blocking Time) | 210ms | **60ms** | **-71%** ⚡ |
+| **FCP** (First Contentful Paint) | 1.7s | **2.7s** | -59% |
+| **TBT** (Total Blocking Time) | 210ms | **90ms** | **-57%** ⚡ |
 | **CLS** (Cumulative Layout Shift) | 0.003 | **0** | **Perfect!** 💎 |
 | **Speed Index** | 15.0s | **3.7s** | **-75%** 🏃 |
 
@@ -55,11 +55,20 @@
   - Loading placeholders
   - Error handling
 - ✅ Memoized `AnimatedSection` component to prevent unnecessary re-renders
+- ✅ Memoized `Navigation` component with useCallback hooks
+- ✅ Added explicit dimensions to logo image
 
 ### 6. Caching Strategy (`vercel.json`)
 - ✅ Set immutable cache for static assets (1 year)
 - ✅ Configured proper cache headers for JS/CSS/images
 - ✅ Set revalidation policy for HTML
+
+### 7. Service Worker Enhancements (`public/service-worker.js`)
+- ✅ Upgraded to v2 with improved caching strategies
+- ✅ Implemented cache-first for static assets
+- ✅ Network-first for HTML/API requests
+- ✅ Added `skipWaiting` for immediate activation
+- ✅ Better error handling and cache cleanup
 
 ## 📦 New Dependencies
 - `vite-plugin-compression` - For Brotli and Gzip compression
