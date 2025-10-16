@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="434bc79c-0091-492e-9cbd-7902d5db6c59"
-      type="text/javascript"
-      async
-    ></script>
     <meta charset="UTF-8" />
     <meta name="google-site-verification" content="VPs99LJbGqX06bo3Bu_mIkcOaByRynX-0V_CKg0cFtc" />
     <link rel="icon" href="/favicon.png" type="image/png" />
@@ -37,15 +30,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://consent.cookiebot.com" />
+    <!-- Preload critical LCP image for Cats page -->
+    <link rel="preload" as="image" href="/assets/cats/Pukis/TICATSJAN25-3798-Edit.jpg" fetchpriority="high" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <link rel="preload" href="/src/main.tsx" as="script" crossorigin />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Load Cookiebot after main content -->
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="434bc79c-0091-492e-9cbd-7902d5db6c59"
+      type="text/javascript"
+      async
+    ></script>
   </body>
 </html>

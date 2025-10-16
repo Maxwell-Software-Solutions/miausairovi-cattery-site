@@ -3,19 +3,19 @@ import { Toaster as Sonner } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
-import About from './pages/About';
-import Cats from './pages/Cats';
-import Gallery from './pages/Gallery';
-import Contact from './pages/Contact';
-import FAQ from './pages/FAQ';
-import NotFound from './pages/NotFound';
-import { preloadImagesWithPriority } from './hooks/useImagePreload';
-import { HIGH_PRIORITY_IMAGES, LOW_PRIORITY_IMAGES } from './config/images';
 import { initializeGA, trackPageView } from './config/analytics';
+
+// Lazy load non-critical pages for better initial load performance
+const About = lazy(() => import('./pages/About'));
+const Cats = lazy(() => import('./pages/Cats'));
+const Gallery = lazy(() => import('./pages/Gallery'));
+const Contact = lazy(() => import('./pages/Contact'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 const queryClient = new QueryClient();
 
@@ -34,15 +34,20 @@ const AnalyticsTracker = () => {
   return null;
 };
 
+// Loading fallback for lazy-loaded pages
+const PageLoadingFallback = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-pulse text-center">
+      <div className="text-6xl mb-4">🐱</div>
+      <p className="text-muted-foreground">Loading...</p>
+    </div>
+  </div>
+);
+
 const App = () => {
   // Initialize Google Analytics when app mounts
   useEffect(() => {
     initializeGA();
-  }, []);
-
-  // Preload images with priority when app mounts
-  useEffect(() => {
-    preloadImagesWithPriority(HIGH_PRIORITY_IMAGES, LOW_PRIORITY_IMAGES);
   }, []);
 
   return (
@@ -52,78 +57,80 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <AnalyticsTracker />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Navigation />
-                  <Home />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <>
-                  <Navigation />
-                  <About />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/cats"
-              element={
-                <>
-                  <Navigation />
-                  <Cats />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/gallery"
-              element={
-                <>
-                  <Navigation />
-                  <Gallery />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <>
-                  <Navigation />
-                  <Contact />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/faq"
-              element={
-                <>
-                  <Navigation />
-                  <FAQ />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="*"
-              element={
-                <>
-                  <Navigation />
-                  <NotFound />
-                  <Footer />
-                </>
-              }
-            />
-          </Routes>
+          <Suspense fallback={<PageLoadingFallback />}>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Navigation />
+                    <Home />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <>
+                    <Navigation />
+                    <About />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/cats"
+                element={
+                  <>
+                    <Navigation />
+                    <Cats />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/gallery"
+                element={
+                  <>
+                    <Navigation />
+                    <Gallery />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <>
+                    <Navigation />
+                    <Contact />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/faq"
+                element={
+                  <>
+                    <Navigation />
+                    <FAQ />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="*"
+                element={
+                  <>
+                    <Navigation />
+                    <NotFound />
+                    <Footer />
+                  </>
+                }
+              />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
