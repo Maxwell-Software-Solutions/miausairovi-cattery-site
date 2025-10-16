@@ -53,6 +53,44 @@ export const LocalBusinessSchema = () => {
       name: 'Worldwide',
     },
     sameAs: ['https://facebook.com/miausairovi', 'https://instagram.com/miausairovi'],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Cat Breeds',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'British Shorthair Kittens',
+            description: 'British Shorthair kittens from GCCF & TICA registered breeder',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'British Longhair Kittens',
+            description: 'British Longhair kittens from GCCF & TICA registered breeder',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Scottish Fold Kittens',
+            description: 'Scottish Fold kittens from GCCF & TICA registered breeder',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Scottish Straight Kittens',
+            description: 'Scottish Straight kittens from GCCF & TICA registered breeder',
+          },
+        },
+      ],
+    },
   };
 
   return (
