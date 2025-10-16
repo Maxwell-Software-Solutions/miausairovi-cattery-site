@@ -28,3 +28,10 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+# Test artifacts
+/playwright-report/
+/playwright/.cache/
+/test-results/
+/lighthouse-report.report.html
+/lighthouse-report.report.json

@@ -1,0 +1,37 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 1
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "cumulative-layout-shift": [
+          "error",
+          {
+            "maxNumericValue": 0.01
+          }
+        ],
+        "total-byte-weight": [
+          "warn",
+          {
+            "maxNumericValue": 1500000
+          }
+        ],
+        "resource-summary:image:size": [
+          "warn",
+          {
+            "maxNumericValue": 800000
+          }
+        ],
+        "duplicated-javascript": "warn",
+        "uses-optimized-images": "warn",
+        "uses-responsive-images": "warn",
+        "modern-image-formats": "warn"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
