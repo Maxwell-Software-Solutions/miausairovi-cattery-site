@@ -17,7 +17,28 @@ const Contact = lazy(() => import('./pages/Contact'));
 const FAQ = lazy(() => import('./pages/FAQ'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-const queryClient = new QueryClient();
+// Preload commonly accessed pages after initial load
+const preloadPages = () => {
+  // Use requestIdleCallback to preload during idle time
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(
+      () => {
+        import('./pages/Cats');
+        import('./pages/Gallery');
+      },
+      { timeout: 2000 }
+    );
+  }
+};
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutes
+      gcTime: 1000 * 60 * 10, // 10 minutes (formerly cacheTime)
+    },
+  },
+});
 
 /**
  * Analytics Tracker Component
@@ -48,6 +69,8 @@ const App = () => {
   // Initialize Google Analytics when app mounts
   useEffect(() => {
     initializeGA();
+    // Preload commonly accessed pages after initial render
+    preloadPages();
   }, []);
 
   return (

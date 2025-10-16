@@ -1,12 +1,14 @@
 /**
  * AnimatedSection Component
  * Wraps content with scroll-based animation
+ * Optimized to reduce initial render cost
  */
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AnimatedSectionProps } from '@/types/common.types';
+import { memo } from 'react';
 
-export const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children, className = '', delay = 0 }) => {
+const AnimatedSectionComponent: React.FC<AnimatedSectionProps> = ({ children, className = '', delay = 0 }) => {
   const { ref, isVisible } = useScrollAnimation();
   const delayClass = delay > 0 ? `fade-in-delay-${delay}` : 'fade-in';
 
@@ -16,3 +18,6 @@ export const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children, clas
     </div>
   );
 };
+
+// Memoize to prevent unnecessary re-renders
+export const AnimatedSection = memo(AnimatedSectionComponent);

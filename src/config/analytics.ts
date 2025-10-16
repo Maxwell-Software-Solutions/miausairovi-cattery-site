@@ -20,6 +20,7 @@ export const initializeGA = (): void => {
 
   if (!isDevelopment || forceGA) {
     // Defer GA initialization to not block the main thread
+    // Wait until page is fully loaded and idle
     const initGA = () => {
       ReactGA.initialize(GA_MEASUREMENT_ID, {
         gaOptions: {
@@ -36,10 +37,11 @@ export const initializeGA = (): void => {
     };
 
     // Use requestIdleCallback if available, otherwise use setTimeout
+    // Increased delay to ensure it doesn't interfere with critical rendering
     if ('requestIdleCallback' in window) {
-      requestIdleCallback(initGA);
+      requestIdleCallback(initGA, { timeout: 3000 });
     } else {
-      setTimeout(initGA, 1000);
+      setTimeout(initGA, 2000);
     }
   } else {
     console.log('Google Analytics disabled in development mode');
