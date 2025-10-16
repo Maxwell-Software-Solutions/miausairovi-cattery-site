@@ -61,7 +61,7 @@ const cats = [
     titles: 'Champion Esmy',
     images: [
       {
-        src: '/assets/cats/Esmy/thumbnail_DSC_7997.jpg',
+        src: '/assets/cats/Esmy/thumbnail_DSC_7929.jpg',
         alt: 'Esmy - British Shorthair',
       },
     ],
