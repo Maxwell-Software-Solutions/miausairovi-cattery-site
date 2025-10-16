@@ -28,6 +28,11 @@ export default defineConfig(({ mode }) => ({
             '@radix-ui/react-toast',
             '@radix-ui/react-tooltip',
           ],
+          'form-vendor': [
+            'react-hook-form',
+            '@hookform/resolvers',
+            'zod',
+          ],
         },
       },
     },
@@ -37,7 +42,12 @@ export default defineConfig(({ mode }) => ({
       compress: {
         drop_console: mode === 'production',
         drop_debugger: mode === 'production',
+        pure_funcs: mode === 'production' ? ['console.log', 'console.info'] : [],
       },
     },
+    // Optimize chunk size
+    chunkSizeWarningLimit: 600,
+    // Enable CSS code splitting
+    cssCodeSplit: true,
   },
 }));

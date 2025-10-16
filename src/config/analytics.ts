@@ -11,6 +11,7 @@ export const GA_MEASUREMENT_ID = 'G-NSCE0HNZ8P';
 /**
  * Initialize Google Analytics
  * Should be called once when the app starts
+ * Uses requestIdleCallback to avoid blocking the main thread
  */
 export const initializeGA = (): void => {
   // Only initialize in production or if explicitly enabled
@@ -18,18 +19,28 @@ export const initializeGA = (): void => {
   const forceGA = import.meta.env.VITE_FORCE_GA === 'true';
 
   if (!isDevelopment || forceGA) {
-    ReactGA.initialize(GA_MEASUREMENT_ID, {
-      gaOptions: {
-        // Optional: Configure additional GA options
-        siteSpeedSampleRate: 100, // Sample 100% of users for site speed
-      },
-      gtagOptions: {
-        // Optional: Configure gtag options
-        anonymize_ip: true, // Anonymize IP addresses for privacy
-      },
-    });
+    // Defer GA initialization to not block the main thread
+    const initGA = () => {
+      ReactGA.initialize(GA_MEASUREMENT_ID, {
+        gaOptions: {
+          // Optional: Configure additional GA options
+          siteSpeedSampleRate: 100, // Sample 100% of users for site speed
+        },
+        gtagOptions: {
+          // Optional: Configure gtag options
+          anonymize_ip: true, // Anonymize IP addresses for privacy
+        },
+      });
 
-    console.log('Google Analytics initialized');
+      console.log('Google Analytics initialized');
+    };
+
+    // Use requestIdleCallback if available, otherwise use setTimeout
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(initGA);
+    } else {
+      setTimeout(initGA, 1000);
+    }
   } else {
     console.log('Google Analytics disabled in development mode');
   }

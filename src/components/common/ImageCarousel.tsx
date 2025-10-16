@@ -130,12 +130,12 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
           src={image}
           alt={`${alt} ${idx + 1}`}
           loading={priority && idx === 0 ? 'eager' : 'lazy'}
-          fetchPriority={priority && idx === 0 ? 'high' : 'low'}
+          fetchPriority={priority && idx === 0 ? 'high' : 'auto'}
           decoding="async"
           width="800"
           height="800"
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
-            idx === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            idx === currentImageIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         />
       ))}

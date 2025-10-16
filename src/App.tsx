@@ -13,8 +13,6 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import NotFound from './pages/NotFound';
-import { preloadImagesWithPriority } from './hooks/useImagePreload';
-import { HIGH_PRIORITY_IMAGES, LOW_PRIORITY_IMAGES } from './config/images';
 import { initializeGA, trackPageView } from './config/analytics';
 
 const queryClient = new QueryClient();
@@ -38,11 +36,6 @@ const App = () => {
   // Initialize Google Analytics when app mounts
   useEffect(() => {
     initializeGA();
-  }, []);
-
-  // Preload images with priority when app mounts
-  useEffect(() => {
-    preloadImagesWithPriority(HIGH_PRIORITY_IMAGES, LOW_PRIORITY_IMAGES);
   }, []);
 
   return (
