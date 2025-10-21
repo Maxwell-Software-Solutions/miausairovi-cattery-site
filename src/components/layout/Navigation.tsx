@@ -29,7 +29,6 @@ const Navigation = memo(() => {
             <span className="text-2xl font-bold text-primary">{APP_CONFIG.siteName}</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <Link
