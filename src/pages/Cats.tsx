@@ -7,6 +7,39 @@ import { PAGE_CONTENT } from '@/config/constants';
 // Static cat data
 const cats = [
   {
+    name: 'Elijas',
+    breed: 'British Longhair',
+    color: 'Lilac Golden Shell Bi Colour',
+    titles: 'Supreme Mirage',
+    images: [
+      {
+        src: '/assets/cats/Elijas/1000133345.jpg',
+        alt: 'Elijas - British Longhair',
+      },
+      {
+        src: '/assets/cats/Elijas/1000133358.jpg',
+        alt: 'Elijas - British Longhair',
+      },
+      {
+        src: '/assets/cats/Elijas/1000133362.jpg',
+        alt: 'Elijas - British Longhair',
+      },
+      {
+        src: '/assets/cats/Elijas/1000133370.jpg',
+        alt: 'Elijas - British Longhair',
+      },
+      {
+        src: '/assets/cats/Elijas/1000133382.jpg',
+        alt: 'Elijas - British Longhair',
+      },
+    ],
+    featured: true,
+    order: 1,
+    slug: 'elijas',
+    description:
+      'Our future stud Supreme Mirage Elijas import from Romania, incredible champions blood line from around the world. British longhair lilac golden shell bi colour.',
+  },
+  {
     name: 'Pukis',
     breed: 'British Longhair',
     color: 'Golden Shaded',
@@ -26,7 +59,7 @@ const cats = [
       },
     ],
     featured: true,
-    order: 1,
+    order: 2,
     slug: 'pukis',
     description: 'Our boy Grand Champion Diamondglow Pukis of Miausairovi.',
   },
@@ -50,7 +83,7 @@ const cats = [
       },
     ],
     featured: true,
-    order: 2,
+    order: 3,
     slug: 'afina',
     description: 'RW QGC Magic Marble Afina. Scottish fold girl.',
   },
@@ -66,7 +99,7 @@ const cats = [
       },
     ],
     featured: true,
-    order: 3,
+    order: 4,
     slug: 'esmy',
     description: 'Champion Esmy, our beautiful British Shorthair queen.',
   },
