@@ -52,6 +52,41 @@ const Gallery = () => {
               for more information about the adoption process.
             </p>
           </div>
+
+          {/* Breed Information Card */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="bg-gradient-to-br from-secondary to-secondary/50 rounded-xl p-8 shadow-soft border border-border">
+              <h2 className="text-2xl font-bold mb-4 text-foreground">Our Kittens Include</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-muted-foreground">
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">📋 What's Included</h3>
+                  <ul className="space-y-1 text-sm">
+                    <li>• 5-generation pedigree certificate if requested</li>
+                    <li>• GCCF registration & breeder slip</li>
+                    <li>• Two vaccinations (8 & 12 weeks)</li>
+                    <li>• Microchip & health certificate</li>
+                    <li>• Kitten starter pack & lifetime support</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">🏠 Ready to Leave</h3>
+                  <ul className="space-y-1 text-sm">
+                    <li>• At 12 weeks (3 months) of age</li>
+                    <li>• Both male & female available</li>
+                    <li>• Pricing: £1000-£2,500</li>
+                    <li>• Worldwide shipping available</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-6 pt-6 border-t border-border">
+                <h3 className="font-semibold text-foreground mb-2">🎨 Colors & Breeds</h3>
+                <p className="text-sm text-muted-foreground">
+                  British Shorthair, British Longhair, Scottish Fold & Scottish Straight in blue, lilac, cream, blue
+                  cream, blue cream tabby, blue shaded, chocolate golden shaded, silver tabby, and more.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

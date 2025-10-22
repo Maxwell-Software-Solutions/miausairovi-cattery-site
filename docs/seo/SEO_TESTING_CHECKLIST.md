@@ -105,7 +105,7 @@ Right-click on images → **Inspect** and verify alt attributes:
   ```html
   alt="[Name], [age] available British Shorthair kitten at Miausairovi Cattery Peterborough UK"
   ```
-  Example: "Luna, 10 weeks available British Shorthair kitten at Miausairovi Cattery Peterborough UK"
+  Example: "Luna, 8 weeks available Scottish Fold kitten (silk golden colour point) at Miausairovi Cattery Peterborough UK"
 
 ### 5. Internal Links Verification
 Test all internal links navigate correctly:

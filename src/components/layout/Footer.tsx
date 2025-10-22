@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react';
+import { MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { APP_CONFIG, CONTACT_INFO } from '@/config/constants';
 import { FOOTER_LINKS } from '@/config/navigation';
@@ -38,6 +38,31 @@ const Footer = () => {
                   <span>{CONTACT_INFO.locationDetails}</span>
                 </div>
               )}
+              <div className="pt-4">
+                <h5 className="font-semibold text-foreground mb-2">Follow Us</h5>
+                <div className="flex gap-4">
+                  <a
+                    href="https://www.facebook.com/share/1ZEq7U4Fgi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
+                    aria-label="Visit our Facebook page"
+                  >
+                    <Facebook className="h-5 w-5" />
+                    <span className="text-sm">Facebook</span>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/scottishfold_british_cats_uk/?igshid=MTJ1emp4bzZvbXdqQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
+                    aria-label="Visit our Instagram page"
+                  >
+                    <Instagram className="h-5 w-5" />
+                    <span className="text-sm">Instagram</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

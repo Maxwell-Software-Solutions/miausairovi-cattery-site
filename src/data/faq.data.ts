@@ -36,14 +36,14 @@ export const faqData: FAQ[] = [
     id: 4,
     question: 'What vaccinations do kittens receive?',
     answer:
-      'All kittens receive their first vaccination (covering feline herpesvirus, calicivirus, and panleukopenia) before leaving at 13 weeks. We provide a vaccination card and recommend the second vaccination at 16 weeks from your local vet.',
+      'All kittens receive their first vaccination (covering feline herpesvirus, calicivirus, and panleukopenia) before leaving at 12 weeks. We provide a vaccination card and recommend the first vaccination at 8 weeks second vaccination at 12 weeks from your local vet.',
     category: 'health',
   },
   {
     id: 5,
     question: 'When can kittens go to their new homes?',
     answer:
-      'Our kittens are ready to go to their new homes at 13 weeks of age. This ensures they are fully weaned, litter trained, socialized, and have received their first vaccination. Early socialization is crucial for developing confident, well-adjusted cats.',
+      'Our kittens are ready to go to their new homes at 12 weeks of age. This ensures they are fully weaned, litter trained, socialized, and have received their first vaccination. Early socialization is crucial for developing confident, well-adjusted cats.',
     category: 'adoption',
   },
   {
@@ -92,7 +92,7 @@ export const faqData: FAQ[] = [
     id: 12,
     question: 'What is included when I purchase a kitten?',
     answer:
-      "Your kitten comes with: GCCF & TICA registration certificates, 5-generation pedigree, vaccination record, microchip, health check certificate, food sample, toy with familiar scent, care guide, and lifetime breeder support. We're always here to answer questions!",
+      "Your kitten comes with: GCCF & TICA registration certificates, 5-generation pedigree if requested, vaccination record, microchip, health check certificate, food sample, toy with familiar scent, care guide, and lifetime breeder support. We're always here to answer questions!",
     category: 'adoption',
   },
   {

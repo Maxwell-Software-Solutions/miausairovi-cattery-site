@@ -1,7 +1,7 @@
 ---
 name: Esmy
 breed: British Longhair
-color: Female
+color: Black Golden Shaded
 titles: Miausairovi
 images:
   - image: /assets/cats/Esmy/thumbnail_DSC_7929.jpg

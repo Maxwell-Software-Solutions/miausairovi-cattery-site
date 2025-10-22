@@ -4,4 +4,4 @@ category: adoption
 order: 5
 ---
 
-Our kittens are ready to go to their new homes at 13 weeks of age. This ensures they are fully weaned, litter trained, socialized, and have received their first vaccination. Early socialization is crucial for developing confident, well-adjusted cats.
+Our kittens are ready to go to their new homes at around 4 months (16 weeks) of age. This ensures they are fully weaned, litter trained, socialized, and have received both vaccinations (first at 8 weeks, second at 12 weeks). Early socialization is crucial for developing confident, well-adjusted cats. Both male and female kittens are typically available.

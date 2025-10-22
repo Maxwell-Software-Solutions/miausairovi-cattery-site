@@ -48,6 +48,16 @@ export const Reviews = ({ title = 'What Our Clients Say', showAllReviews = false
             <span className="text-lg font-semibold">{averageRating}</span>
             <span className="text-muted-foreground">({totalCount} reviews)</span>
           </div>
+          <p className="text-center text-muted-foreground mb-8">
+            <a
+              href="https://www.facebook.com/share/1ZEq7U4Fgi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-accent transition-colors font-medium"
+            >
+              Read more customer reviews on Facebook
+            </a>
+          </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">

@@ -127,7 +127,7 @@ Created `StructuredData.tsx` with 5 schema types for Google rich snippets:
 
 #### **Kitten Card Images**
 - **Alt Text**: "[Name], [age] available British Shorthair kitten at Miausairovi Cattery Peterborough UK"
-- Example: "Luna, 10 weeks available British Shorthair kitten at Miausairovi Cattery Peterborough UK"
+- Example: "Luna, 8 weeks available Scottish Fold kitten (silk golden colour point) at Miausairovi Cattery Peterborough UK"
 
 ---
 

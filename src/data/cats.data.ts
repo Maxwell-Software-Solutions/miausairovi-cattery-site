@@ -40,7 +40,7 @@ export const catsData: Cat[] = [
     slug: 'esmy',
     name: 'Esmy',
     breed: 'British Longhair',
-    color: 'Female',
+    color: 'Black Golden Shaded',
     description: 'Miausairovi Esmy, British longhair female.',
     titles: 'Miausairovi',
     images: [

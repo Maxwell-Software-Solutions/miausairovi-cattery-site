@@ -36,13 +36,13 @@ New fields added:
 
 #### Updated Kitten Data (`kittens.data.ts`)
 Replaced generic "Kitten 1, 2, 3..." with meaningful names:
-- Luna (female British Shorthair, Blue)
-- Oliver (male British Shorthair, Blue)
-- Poppy (female British Longhair, Lilac)
-- Milo (male Scottish Fold, Cream)
-- Iris (female Scottish Straight, Blue Shaded)
-- Jasper (male British Shorthair, Lilac)
-- Sophie (female British Longhair, Blue Cream)
+- Luna (female Scottish Fold, Silk Golden Colour Point)
+- Oliver (male British Shorthair, Silk Golden Colour Point)
+- Poppy (female British Shorthair, Silver Tabby)
+- Milo (female British Shorthair, Silk Golden Colour Point)
+- Iris (male Scottish Straight, Chocolate Golden Shaded)
+- Jasper (male British Shorthair, Golden Chocolate Shaded)
+- Sophie (male Scottish Fold Longhair, Blue Cream Tabby)
 
 All kittens include:
 - Sex and breed information
