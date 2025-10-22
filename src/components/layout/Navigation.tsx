@@ -22,7 +22,6 @@ const Navigation = memo(() => {
               src={logo}
               alt="Miausairovi Cattery - British Shorthair Breeder Peterborough UK"
               className="h-12 md:h-14"
-              width="56"
               height="56"
               loading="eager"
             />
