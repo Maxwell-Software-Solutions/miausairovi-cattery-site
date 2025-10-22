@@ -4,7 +4,7 @@
  */
 
 import { Card } from '@/components/ui/card';
-import { MapPin } from 'lucide-react';
+import { MapPin, Facebook } from 'lucide-react';
 import { CONTACT_INFO, PAGE_CONTENT } from '@/config/constants';
 
 export const ContactInfo: React.FC = () => {
@@ -27,7 +27,26 @@ export const ContactInfo: React.FC = () => {
                   {CONTACT_INFO.locationDetails}
                 </>
               )}
+              <br />
+              <span className="text-primary font-medium">Worldwide shipping available</span>
             </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <Facebook className="h-5 w-5 text-primary" />
+          </div>
+          <div>
+            <h3 className="font-semibold mb-1">Follow Us</h3>
+            <a
+              href="https://www.facebook.com/share/1ZEq7U4Fgi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary hover:text-accent transition-colors font-medium"
+            >
+              Find us on Facebook
+            </a>
           </div>
         </div>
       </div>

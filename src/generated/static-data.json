@@ -1,6 +1,38 @@
 {
   "cats": [
     {
+      "name": "Elijas",
+      "breed": "British Longhair",
+      "color": "Lilac Golden Shell Bi Colour",
+      "titles": "Supreme Mirage",
+      "images": [
+        {
+          "src": "/assets/cats/Elijas/1000133345.jpg",
+          "alt": "Elijas - British Longhair"
+        },
+        {
+          "src": "/assets/cats/Elijas/1000133358.jpg",
+          "alt": "Elijas - British Longhair"
+        },
+        {
+          "src": "/assets/cats/Elijas/1000133362.jpg",
+          "alt": "Elijas - British Longhair"
+        },
+        {
+          "src": "/assets/cats/Elijas/1000133370.jpg",
+          "alt": "Elijas - British Longhair"
+        },
+        {
+          "src": "/assets/cats/Elijas/1000133382.jpg",
+          "alt": "Elijas - British Longhair"
+        }
+      ],
+      "featured": true,
+      "order": 1,
+      "slug": "elijas",
+      "description": "Our future stud Supreme Mirage Elijas import from Romania, incredible champions blood line from around the world. British longhair lilac golden shell bi colour."
+    },
+    {
       "name": "Pukis",
       "breed": "British Longhair",
       "color": "Golden Shaded",
@@ -162,7 +194,7 @@
       "category": "adoption",
       "order": 1,
       "slug": "how-much-does-a-british-shorthair-kitten-cost",
-      "description": "Our British Shorthair kittens are priced between £800-£1,500 depending on color, pedigree, and show quality. The price includes first vaccinations, health check, microchip, GCCF registration, and a kitten starter pack with food and toys."
+      "description": "Our British Shorthair, British Longhair, Scottish Fold, and Scottish Straight kittens are priced between £800-£1,500 depending on breed, color, pedigree quality, and coat pattern. The price includes first and second vaccinations (at 8 and 12 weeks), health check, microchip, GCCF registration, 5-generation pedigree certificate, breeder slip, and a kitten starter pack with food and toys."
     },
     {
       "question": "Where is Miausairovi Cattery located?",
@@ -183,14 +215,14 @@
       "category": "health",
       "order": 4,
       "slug": "what-vaccinations-do-kittens-receive",
-      "description": "All kittens receive their first vaccination (covering feline herpesvirus, calicivirus, and panleukopenia) before leaving at 13 weeks. We provide a vaccination card and recommend the second vaccination at 16 weeks from your local vet."
+      "description": "All kittens receive their first vaccination at 8 weeks of age and their second vaccination at 12 weeks of age (covering feline herpesvirus, calicivirus, and panleukopenia). Kittens are ready to leave for their new homes after 16 weeks, once fully protected. We provide a complete vaccination card with all records."
     },
     {
       "question": "When can kittens go to their new homes?",
       "category": "adoption",
       "order": 5,
       "slug": "when-can-kittens-go-to-their-new-homes",
-      "description": "Our kittens are ready to go to their new homes at 13 weeks of age. This ensures they are fully weaned, litter trained, socialized, and have received their first vaccination. Early socialization is crucial for developing confident, well-adjusted cats."
+      "description": "Our kittens are ready to go to their new homes at around 4 months (16 weeks) of age. This ensures they are fully weaned, litter trained, socialized, and have received both vaccinations (first at 8 weeks, second at 12 weeks). Early socialization is crucial for developing confident, well-adjusted cats. Both male and female kittens are typically available."
     },
     {
       "question": "Are your cats GCCF and TICA registered?",
@@ -232,14 +264,14 @@
       "category": "general",
       "order": 11,
       "slug": "what-colors-do-you-breed",
-      "description": "We specialize in British Shorthair, British Longhair, Scottish Fold, and Scottish Straight cats. We currently breed blue, lilac, and cream colors across these breeds. Each color has its own unique charm. Check our breeding cats and available kittens pages to see our current colors."
+      "description": "We specialize in British Shorthair, British Longhair, Scottish Fold, and Scottish Straight cats in a beautiful variety of colors and patterns. Our breeding program includes: blue, lilac, cream, blue cream, blue cream tabby, blue shaded, chocolate golden shaded, silver tabby, and other variations. We also work with both shorthair and longhair coat varieties. Each color and pattern combination has its own unique charm. Check our breeding cats and available kittens pages to see our current colors and upcoming litters."
     },
     {
       "question": "What is included when I purchase a kitten?",
       "category": "adoption",
       "order": 12,
       "slug": "what-is-included-when-i-purchase-a-kitten",
-      "description": "Your kitten comes with: GCCF registration certificate, 5-generation pedigree, vaccination record, microchip, health check certificate, food sample, toy with familiar scent, care guide, and lifetime breeder support. We're always here to answer questions!"
+      "description": "Your kitten comes with: GCCF registration certificate, 5-generation pedigree certificate, breeder slip, vaccination record (first vaccination at 8 weeks, second at 12 weeks), microchip, health check certificate, food sample, toy with familiar scent, care guide, and lifetime breeder support. We're always here to answer questions!"
     },
     {
       "question": "What should I prepare before bringing my kitten home?",
