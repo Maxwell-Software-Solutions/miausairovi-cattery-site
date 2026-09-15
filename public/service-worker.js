@@ -1,5 +1,5 @@
-const CACHE_NAME = 'miausairovi-v2';
-const STATIC_CACHE = 'miausairovi-static-v2';
+const CACHE_NAME = 'miausairovi-v3';
+const STATIC_CACHE = 'miausairovi-static-v3';
 const urlsToCache = ['/', '/cats', '/gallery', '/contact', '/faq'];
 
 // Critical assets to prefetch
