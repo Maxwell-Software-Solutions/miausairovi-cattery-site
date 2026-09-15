@@ -63,24 +63,33 @@ const Home = () => {
         <section className="py-16 px-4 bg-primary/5">
           <AnimatedSection>
             <div className="container mx-auto max-w-4xl">
-              <div className="bg-gradient-to-br from-secondary to-secondary/50 rounded-xl p-10 shadow-soft border border-border text-center">
-                <span className="inline-block text-sm font-semibold tracking-wide uppercase text-primary mb-3">
-                  New Litter Announcement
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-                  Introducing Our Scottish Fold Longhair Kittens
-                </h2>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-                  Born 15th July 2026, our three gorgeous Scottish Fold Longhair kittens (2 boys, 1 girl) have a
-                  stunning black golden with white long coat. Mum Cindy is TICA RW Best Scottish Fold Shorthair
-                  Kitten of the Year, and Dad is a British Longhair Lilac Golden Bi-Colour imported from Romania.
-                  Raised with love in our home, they'll be ready to leave once their vaccination course is complete.
-                </p>
-                <Link to="/gallery" onClick={() => GAEvents.ctaClick('New Litter Announcement', '/gallery')}>
-                  <Button size="lg" className="px-8">
-                    Meet the New Litter
-                  </Button>
-                </Link>
+              <div className="bg-gradient-to-br from-secondary to-secondary/50 rounded-xl p-10 shadow-soft border border-border grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <img
+                  src="/assets/cats/Kittens/new-litter-announcement.jpg"
+                  alt="Beautiful Scottish Fold Longhair kittens - black golden with white, mum Cindy and dad British Longhair"
+                  className="rounded-lg shadow-soft w-full h-auto"
+                  loading="lazy"
+                />
+                <div className="text-center md:text-left">
+                  <span className="inline-block text-sm font-semibold tracking-wide uppercase text-primary mb-3">
+                    New Litter Announcement
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+                    Introducing Our Scottish Fold Longhair Kittens
+                  </h2>
+                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                    Born 15th July 2026, our three gorgeous Scottish Fold Longhair kittens (2 boys, 1 girl) have a
+                    stunning black golden with white long coat. Mum Cindy is TICA RW Best Scottish Fold Shorthair
+                    Kitten of the Year, and Dad is a British Longhair Lilac Golden Bi-Colour imported from Romania.
+                    Raised with love in our home, they'll be ready to leave once their vaccination course is
+                    complete.
+                  </p>
+                  <Link to="/gallery" onClick={() => GAEvents.ctaClick('New Litter Announcement', '/gallery')}>
+                    <Button size="lg" className="px-8">
+                      Meet the New Litter
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </AnimatedSection>
