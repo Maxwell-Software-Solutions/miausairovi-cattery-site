@@ -111,6 +111,14 @@
       "description": "Available 8 weeks old kitten."
     },
     {
+      "name": "Light Blue Boy",
+      "age": "Newborn",
+      "status": "not-ready",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_light-blue-boy.jpg",
+      "slug": "kitten-10",
+      "description": "Scottish Fold Longhair boy, black golden with white, light blue collar. Born 15th July 2026 to Cindy (Scottish Fold Shorthair, TICA RW Best Scottish Fold Shorthair Kitten of the Year) and our British Longhair Lilac Golden Bi-Colour import from Romania. Vaccinations booked for 18th September and 9th October 2026; ready to leave once the full vaccination course is completed."
+    },
+    {
       "name": "Kitten 2",
       "age": "6 weeks",
       "status": "available",
@@ -157,6 +165,22 @@
       "image": "/assets/cats/Kittens/thumbnail_DSC_9909.jpg",
       "slug": "kitten-7",
       "description": "Available 11 weeks old kitten."
+    },
+    {
+      "name": "Yellow Girl",
+      "age": "Newborn",
+      "status": "not-ready",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_yellow-girl.jpg",
+      "slug": "kitten-8",
+      "description": "Scottish Fold Longhair girl, black golden with white, yellow collar. Born 15th July 2026 to Cindy (Scottish Fold Shorthair, TICA RW Best Scottish Fold Shorthair Kitten of the Year) and our British Longhair Lilac Golden Bi-Colour import from Romania. Vaccinations booked for 18th September and 9th October 2026; ready to leave once the full vaccination course is completed."
+    },
+    {
+      "name": "Dark Blue Boy",
+      "age": "Newborn",
+      "status": "not-ready",
+      "image": "/assets/cats/Kittens/thumbnail_DSC_dark-blue-boy.jpg",
+      "slug": "kitten-9",
+      "description": "Scottish Fold Longhair boy, black golden with white, dark blue collar. Born 15th July 2026 to Cindy (Scottish Fold Shorthair, TICA RW Best Scottish Fold Shorthair Kitten of the Year) and our British Longhair Lilac Golden Bi-Colour import from Romania. Vaccinations booked for 18th September and 9th October 2026; ready to leave once the full vaccination course is completed."
     }
   ],
   "reviews": [

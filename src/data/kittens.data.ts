@@ -132,6 +132,63 @@ export const kittensData: Kitten[] = [
       father: 'Pukis',
     },
   },
+  {
+    id: 8,
+    name: 'Yellow Girl',
+    sex: 'female',
+    breed: 'Scottish Fold Longhair',
+    color: 'Black Golden with White',
+    age: 'Newborn',
+    dateOfBirth: '2026-07-15',
+    status: KittenStatus.NotReady,
+    image: '/assets/cats/Kittens/thumbnail_DSC_yellow-girl.jpg',
+    altText: 'Yellow Girl - female Scottish Fold Longhair kitten, black golden with white, yellow collar',
+    description:
+      'Beautiful girl with a stunning black golden with white long coat, identified by her yellow collar. Raised in our loving home with plenty of cuddles and everyday household sounds.',
+    temperament: 'Sweet, playful, affectionate',
+    parents: {
+      mother: 'Cindy',
+      father: 'British Longhair (Lilac Golden Bi-Colour, imported from Romania)',
+    },
+  },
+  {
+    id: 9,
+    name: 'Dark Blue Boy',
+    sex: 'male',
+    breed: 'Scottish Fold Longhair',
+    color: 'Black Golden with White',
+    age: 'Newborn',
+    dateOfBirth: '2026-07-15',
+    status: KittenStatus.NotReady,
+    image: '/assets/cats/Kittens/thumbnail_DSC_dark-blue-boy.jpg',
+    altText: 'Dark Blue Boy - male Scottish Fold Longhair kitten, black golden with white, dark blue collar',
+    description:
+      'Handsome boy with a stunning black golden with white long coat, identified by his dark blue collar. Raised in our loving home with plenty of cuddles and everyday household sounds.',
+    temperament: 'Confident, sociable, loving',
+    parents: {
+      mother: 'Cindy',
+      father: 'British Longhair (Lilac Golden Bi-Colour, imported from Romania)',
+    },
+  },
+  {
+    id: 10,
+    name: 'Light Blue Boy',
+    sex: 'male',
+    breed: 'Scottish Fold Longhair',
+    color: 'Black Golden with White',
+    age: 'Newborn',
+    dateOfBirth: '2026-07-15',
+    status: KittenStatus.NotReady,
+    image: '/assets/cats/Kittens/thumbnail_DSC_light-blue-boy.jpg',
+    altText: 'Light Blue Boy - male Scottish Fold Longhair kitten, black golden with white, light blue collar',
+    description:
+      'Handsome boy with a stunning black golden with white long coat, identified by his light blue collar. Raised in our loving home with plenty of cuddles and everyday household sounds.',
+    temperament: 'Gentle, curious, affectionate',
+    parents: {
+      mother: 'Cindy',
+      father: 'British Longhair (Lilac Golden Bi-Colour, imported from Romania)',
+    },
+  },
 ];
 
 /**
