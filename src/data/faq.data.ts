@@ -15,7 +15,7 @@ export const faqData: FAQ[] = [
     id: 1,
     question: 'How much does a British Shorthair kitten cost?',
     answer:
-      'Our British Shorthair kittens are priced between £800-£1,500 depending on color, pedigree, and show quality. The price includes first vaccinations, health check, microchip, GCCF & TICA registration, and a kitten starter pack with food and toys.',
+      'Our British Shorthair kittens are priced between £1,000-£2,500 depending on color, pedigree, and show quality. The price includes first vaccinations, health check, microchip, GCCF & TICA registration, and a kitten starter pack with food and toys.',
     category: 'adoption',
   },
   {
@@ -36,14 +36,14 @@ export const faqData: FAQ[] = [
     id: 4,
     question: 'What vaccinations do kittens receive?',
     answer:
-      'All kittens receive their first vaccination (covering feline herpesvirus, calicivirus, and panleukopenia) before leaving at 12 weeks. We provide a vaccination card and recommend the first vaccination at 8 weeks second vaccination at 12 weeks from your local vet.',
+      'All kittens receive their first vaccination at 8 weeks and their second at 12 weeks (covering feline herpesvirus, calicivirus, and panleukopenia). From then the kittens are ready for their new homes. We provide a vaccination card with all records.',
     category: 'health',
   },
   {
     id: 5,
     question: 'When can kittens go to their new homes?',
     answer:
-      'Our kittens are ready to go to their new homes at 12 weeks of age. This ensures they are fully weaned, litter trained, socialized, and have received their first vaccination. Early socialization is crucial for developing confident, well-adjusted cats.',
+      'Our kittens are ready to go to their new homes at 12 weeks of age. This ensures they are fully weaned, litter trained, socialized, and have received both vaccinations (first at 8 weeks, second at 12 weeks). Early socialization is crucial for developing confident, well-adjusted cats.',
     category: 'adoption',
   },
   {
@@ -85,14 +85,14 @@ export const faqData: FAQ[] = [
     id: 11,
     question: 'What colors do you breed?',
     answer:
-      'We specialize in British Shorthair cats and currently breed blue, lilac, and cream colors. Each color has its own unique charm. Check our breeding cats and available kittens pages to see our current colors.',
+      'We specialize in British Shorthair, British Longhair, Scottish Fold and Scottish Straight cats and currently breed blue, lilac, cream, blue golden, lilac golden and chocolate golden colors. Each color has its own unique charm. Check our breeding cats and available kittens pages to see our current colors.',
     category: 'general',
   },
   {
     id: 12,
     question: 'What is included when I purchase a kitten?',
     answer:
-      "Your kitten comes with: GCCF & TICA registration certificates, 5-generation pedigree if requested, vaccination record, microchip, health check certificate, food sample, toy with familiar scent, care guide, and lifetime breeder support. We're always here to answer questions!",
+      "Your kitten comes with: GCCF & TICA registration certificates, 5-generation pedigree if requested, breeder slip, vaccination record, microchip, health check certificate, food sample, toy with familiar scent, care guide, and lifetime breeder support. We're always here to answer questions!",
     category: 'adoption',
   },
   {
