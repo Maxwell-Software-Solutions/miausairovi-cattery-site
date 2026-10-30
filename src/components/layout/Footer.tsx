@@ -6,7 +6,7 @@ import { FOOTER_LINKS } from '@/config/navigation';
 const SOCIAL_LINKS = [
   {
     name: 'Facebook',
-    href: 'https://www.facebook.com/share/1ZEq7U4Fgi/',
+    href: 'https://www.facebook.com/share/1ZEq7U4Fgj/',
     label: 'Visit our Facebook page',
     Icon: Facebook,
   },

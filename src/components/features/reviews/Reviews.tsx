@@ -50,7 +50,7 @@ export const Reviews = ({ title = 'What Our Clients Say', showAllReviews = false
           </div>
           <p className="text-center text-muted-foreground mb-8">
             <a
-              href="https://www.facebook.com/share/1ZEq7U4Fgi/"
+              href="https://www.facebook.com/share/1ZEq7U4Fgj/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-accent transition-colors font-medium"

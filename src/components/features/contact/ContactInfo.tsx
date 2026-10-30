@@ -40,7 +40,7 @@ export const ContactInfo: React.FC = () => {
           <div>
             <h3 className="font-semibold mb-1">Follow Us</h3>
             <a
-              href="https://www.facebook.com/share/1ZEq7U4Fgi/"
+              href="https://www.facebook.com/share/1ZEq7U4Fgj/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-primary hover:text-accent transition-colors font-medium"
